@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -13,6 +14,8 @@ export default {
         alegreyaSans: ["Alegreya Sans SC", "sans-serif"],
         gaegu: ["Gaegu", "sans-serif"],
         spaceGrotesk: ["Space Grotesk", "sans-serif"],
+        playwriteNGModern: ["Playwrite NG Modern", "sans-serif"],
+        jost: ["Jost", "sans-serif"],
       }
     },
   },
