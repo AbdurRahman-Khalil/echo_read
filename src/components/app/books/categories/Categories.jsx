@@ -58,16 +58,18 @@ let categories = [
 
 export const Categories = () => {
     return (
-        <div id="categories" className="flex flex-wrap gap-2 text-slate-800 dark:text-slate-100">
-            {
-                categories.map(category => (
-                    <Category
-                        key={category.id}
-                        name={category.categoryName}
-                        styles={category.categoryColor}
-                    />
-                ))
-            }
+        <div id="categories" className="overflow-hidden overflow-x-scroll scroll-smooth">
+            <div className="flex gap-1.5 text-slate-800 dark:text-slate-100 ">
+                {
+                    categories.map(category => (
+                        <Category
+                            key={category.id}
+                            name={category.categoryName}
+                            styles={category.categoryColor}
+                        />
+                    ))
+                }
+            </div>
         </div>
     );
 };

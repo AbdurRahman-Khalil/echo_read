@@ -1,12 +1,16 @@
+import { useState, useEffect } from "react";
+
 import { Navbar } from "./components/custom_components/Navbar";
 import { Appt } from "./components/app/Appt";
+import { Chats } from "./components/app/chats/Chats";
+import { Books } from "./components/app/books/Books";
 
 import { FiSun } from "react-icons/fi";
 import { BsMoonStars } from "react-icons/bs";
-import { FaUserCircle } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 
-import { useState, useEffect } from "react";
+import userImg from  "./assets/megan_hanson.jpg"
+
 
 
 const App = () => {
@@ -39,7 +43,7 @@ const App = () => {
     <>
       <header>
         <Navbar
-          styles={"flex justify-between items-center border-b-2 border-b-slate-900/20 dark:border-b-slate-50/20 px-3 pt-[0.4rem] pb-[0.3rem] fixed top-0 left-0 w-full z-50 bg-slate-50/35 dark:bg-slate-950/35 backdrop-blur-xl transition-all duration-500"}
+          styles={"flex justify-between items-center border-b border-slate-900/20 dark:border-slate-50/20 px-3 pt-[0.4rem] pb-[0.3rem] fixed top-0 left-0 w-full z-50 bg-slate-50/35 dark:bg-slate-950/35 backdrop-blur-xl transition-all duration-500"}
         >
           <h1 className="text-[2.35rem] text-slate-800 dark:text-slate-100 font-bold font-playwriteNGModern -mt-[0.1rem] cursor-pointer">EchoRead</h1>
           <div className="flex gap-6 items-center">
@@ -53,12 +57,20 @@ const App = () => {
             >
               {theme === "light" ? <BsMoonStars /> : <FiSun />}
             </button>
-            <div id="user" className="text-slate-800 dark:text-slate-100 border border-slate-900/30 dark:border-slate-50/30 rounded-full p-3"><FaUserCircle className="text-lg" /></div>
+            <div id="user" className="max-w-12 text-slate-800 dark:text-slate-100 border border-slate-900/30 dark:border-slate-50/30 rounded-full p-[0.025rem]"><img className="max-w-full rounded-full" src={userImg} alt="user-image"/></div>
           </div>
         </Navbar>
       </header>
       <main>
-        <Appt />
+        {/* if user isn't logged in */}
+        
+
+        {/* if user is logged in */}
+        <Appt>
+          <Books />
+          <Chats />
+        </Appt>
+
       </main>
     </>
   );

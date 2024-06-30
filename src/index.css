@@ -27,7 +27,7 @@
 
 
 @layer base {
-    #Slider::-webkit-scrollbar {
+    #categories::-webkit-scrollbar {
         display: none;
         /* color: #91c3fd; */
     }
