@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import { Navbar } from "./components/custom_components/Navbar";
 import { Appt } from "./components/app/Appt";
@@ -9,20 +9,31 @@ import { FiSun } from "react-icons/fi";
 import { BsMoonStars } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 
-import userImg from  "./assets/megan_hanson.jpg"
+import userImg from "./assets/megan_hanson.jpg";
+
+
+import useThemeStore from "./stores/theme/ThemeStore";
 
 
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
 
-  const darkTheme = () => {
-    setTheme("dark");
-  }
+  // const darkTheme = () => {
+  //   setTheme("dark");
+  // }
 
-  const lightTheme = () => {
-    setTheme("light");
-  }
+  // const lightTheme = () => {
+  //   setTheme("light");
+  // }
+
+  const { theme, darkTheme, lightTheme } = useThemeStore((state) => ({
+    theme: state.theme,
+    darkTheme: state.darkTheme,
+    lightTheme: state.lightTheme
+  }));
+
+
 
   // Change in theme
   useEffect(() => {
@@ -34,7 +45,7 @@ const App = () => {
   }, [theme]);
 
 
-  const handleToggle = () => {
+  const handleTheme = () => {
     theme === "light" ? darkTheme() : lightTheme();
   }
 
@@ -53,17 +64,17 @@ const App = () => {
             </form>
             <button
               className="text-slate-800 dark:text-slate-100 text-lg border border-slate-900/30 dark:border-slate-50/30 rounded-full -ml-2.5 p-[0.7rem] transition-all duration-500"
-              onClick={handleToggle}
+              onClick={handleTheme}
             >
               {theme === "light" ? <BsMoonStars /> : <FiSun />}
             </button>
-            <div id="user" className="max-w-12 text-slate-800 dark:text-slate-100 border border-slate-900/30 dark:border-slate-50/30 rounded-full p-[0.025rem]"><img className="max-w-full rounded-full" src={userImg} alt="user-image"/></div>
+            <div id="user" className="max-w-12 text-slate-800 dark:text-slate-100 border border-slate-900/30 dark:border-slate-50/30 rounded-full p-[0.025rem]"><img className="max-w-full rounded-full" src={userImg} alt="user-image" /></div>
           </div>
         </Navbar>
       </header>
       <main>
         {/* if user isn't logged in */}
-        
+
 
         {/* if user is logged in */}
         <Appt>

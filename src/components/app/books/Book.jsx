@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
-
 import star from "../../../assets/ratings/star.png";
 
 
 export const Book = ({ key, bookImg, bookName, author, ratings, userImg, userName }) => {
     return (
-        <Link
+        <div
             key={key}
             className="flex max-w-full min-h-44 -space-x-8 border rounded-lg border-slate-900/30 dark:border-slate-50/30 text-slate-800 dark:text-slate-100 transition-all duration-500"
         >
@@ -37,6 +35,6 @@ export const Book = ({ key, bookImg, bookName, author, ratings, userImg, userNam
                     Exchange
                 </button>
             </div>
-        </Link>
+        </div>
     );
 };
