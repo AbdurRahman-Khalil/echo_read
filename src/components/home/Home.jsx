@@ -1,5 +1,5 @@
 
-export const Appt = ({ children }) => {
+export const Home = ({ children }) => {
 
     return (
         <section className="relative min-h-[100svh] pt-[4.26rem]">

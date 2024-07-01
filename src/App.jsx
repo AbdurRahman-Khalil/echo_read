@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import { Navbar } from "./components/custom_components/Navbar";
-import { Appt } from "./components/app/Appt";
+import { Home } from "./components/app/Home";
 import { Chats } from "./components/app/chats/Chats";
 import { Books } from "./components/app/books/Books";
 
@@ -77,10 +77,10 @@ const App = () => {
 
 
         {/* if user is logged in */}
-        <Appt>
+        <Home>
           <Books />
           <Chats />
-        </Appt>
+        </Home>
 
       </main>
     </>
