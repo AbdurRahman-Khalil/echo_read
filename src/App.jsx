@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
 import { Navbar } from "./components/custom_components/Navbar";
-import { Home } from "./components/app/Home";
-import { Chats } from "./components/app/chats/Chats";
-import { Books } from "./components/app/books/Books";
+import { Home } from "./components/home/Home";
+import { Chats } from "./components/home/chats/Chats";
+import { Books } from "./components/home/books/Books";
 
 import { FiSun } from "react-icons/fi";
 import { BsMoonStars } from "react-icons/bs";
