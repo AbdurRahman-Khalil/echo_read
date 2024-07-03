@@ -68,34 +68,7 @@ const books = [
     {
         id: 6,
         bookImg: b6,
-        bookName: "The tales of Beedle The Bard",
-        author: "J.K. Rowling",
-        ratings: 4.5,
-        userImg: u6,
-        userName: "Julio Shaw"
-    },
-    {
-        id: 6,
-        bookImg: b6,
-        bookName: "The tales of Beedle The Bard",
-        author: "J.K. Rowling",
-        ratings: 4.5,
-        userImg: u6,
-        userName: "Julio Shaw"
-    },
-    {
-        id: 6,
-        bookImg: b6,
-        bookName: "The tales of Beedle The Bard",
-        author: "J.K. Rowling",
-        ratings: 4.5,
-        userImg: u6,
-        userName: "Julio Shaw"
-    },
-    {
-        id: 6,
-        bookImg: b6,
-        bookName: "The tales of Beedle The Bard",
+        bookName: "The Tales of Beedle The Bard",
         author: "J.K. Rowling",
         ratings: 4.5,
         userImg: u6,
