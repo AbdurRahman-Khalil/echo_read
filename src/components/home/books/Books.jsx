@@ -1,5 +1,5 @@
 import { Categories } from "./categories/Categories";
-import { Book } from "./Book";
+// import { Book } from "./Book";
 
 import b1 from "../../../assets/books/book1.jpeg";
 import b2 from "../../../assets/books/book2.jpg";
@@ -14,6 +14,7 @@ import u3 from "../../../assets/leta_carpenter.jpg";
 import u4 from "../../../assets/owen_frazier.jpg";
 import u5 from "../../../assets/vickie_mckinney.jpg";
 import u6 from "../../../assets/julio_shaw.jpg";
+import { BookOpened } from "./BookOpened";
 
 
 
@@ -107,7 +108,7 @@ export const Books = () => {
     return (
         <div id="books" className="mt-3 mr-3.5 ml-[14.25rem] max-[785px]:ml-3.5">
             <Categories />
-            <div id="books-container" className="grid grid-cols-3 max-[1024px]:grid-cols-2 max-[561px]:grid-cols-1 min-[1425px]:grid-cols-4  gap-3 mt-3.5">
+            {/* <div id="books-container" className="grid grid-cols-3 max-[1024px]:grid-cols-2 max-[561px]:grid-cols-1 min-[1425px]:grid-cols-4  gap-3 mt-3.5">
                 {
                     books.map(book => (
                         <Book
@@ -121,7 +122,8 @@ export const Books = () => {
                         />
                     ))
                 }
-            </div>
+            </div> */}
+            <BookOpened />
         </div>
     );
 };
