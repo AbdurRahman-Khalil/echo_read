@@ -17,23 +17,12 @@ import useThemeStore from "./stores/theme/ThemeStore";
 
 
 const App = () => {
-  // const [theme, setTheme] = useState("light");
-
-  // const darkTheme = () => {
-  //   setTheme("dark");
-  // }
-
-  // const lightTheme = () => {
-  //   setTheme("light");
-  // }
 
   const { theme, darkTheme, lightTheme } = useThemeStore((state) => ({
     theme: state.theme,
     darkTheme: state.darkTheme,
     lightTheme: state.lightTheme
   }));
-
-
 
   // Change in theme
   useEffect(() => {
@@ -43,7 +32,6 @@ const App = () => {
     htmlTree.classList.add(theme);
 
   }, [theme]);
-
 
   const handleTheme = () => {
     theme === "light" ? darkTheme() : lightTheme();
