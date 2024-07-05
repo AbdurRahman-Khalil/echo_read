@@ -1,4 +1,6 @@
-import star from "../../../assets/ratings/star.png";
+import { ExchangeBtn } from "../../custom_components/ExchangeBtn";
+import { Ratings } from "../../custom_components/Ratings";
+import { User } from "../../custom_components/User";
 
 
 export const Book = ({ key, bookImg, bookName, author, ratings, userImg, userName }) => {
@@ -20,32 +22,22 @@ export const Book = ({ key, bookImg, bookName, author, ratings, userImg, userNam
 
                 <p className="text-sm max-[1080px]:text-[0.82rem] max-[1024px]:text-base max-[841px]:text-[0.935rem] max-[815px]:text-[0.91rem] max-[785px]:text-base max-[645px]:text-[0.93rem] max-[605px]:text-[0.91rem] max-[561px]:text-[1.2rem] max-[423px]:text-[1.08rem] max-[365px]:text-base font-semibold dark:font-medium line-clamp-1 min-[1425px]:text-[0.835rem] min-[1525px]:text-sm min-[1425px]:leading-6"
                 >{author}</p>
-                
-                <div className="ratings flex items-center">
-                    <p className="mt-1 max-[561px]:text-lg max-[423px]:text-[1.035rem] max-[365px]:text-[0.98rem] min-[1425px]:text-[0.935rem] min-[1525px]:text-base"
-                    >{ratings}</p>
-                    <img 
-                        className="max-w-6 max-[561px]:max-w-8 max-[423px]:max-w-7 max-[365px]:max-w-[1.613rem] min-[1425px]:max-w-[1.38rem] min-[1525px]:max-w-6" 
-                        src={star} 
-                        alt="start image"
-                    />
-                    {/* <p>{"(10+ users)"}</p> */}
-                </div>
-                <div className="user flex items-center gap-1 max-[561px]:gap-2 max-[365px]:gap-1.5 min-[1425px]:gap-1.5 min-[1425px]:mt-1 min-[1525px]:mt-0">
-                    <img
-                        className="max-w-8 max-[561px]:max-w-12 max-[423px]:max-w-11 max-[365px]:max-w-10 max-[355px]:max-w-9 min-[1425px]:max-w-7 min-[1525px]:max-w-8 rounded-full p-[0.01rem] border border-slate-900/50 dark:border-slate-50/50"
-                        src={userImg}
-                        alt={userImg + "'s image"}
-                    />
-                    <p className="text-[0.8rem] max-[1080px]:text-[0.77rem] max-[1024px]:text-[0.9rem] max-[841px]:text-[0.865rem] max-[815px]:text-[0.825rem] max-[785px]:text-[0.89rem] max-[645px]:text-[0.85rem] max-[605px]:text-[0.815rem] max-[561px]:text-[1.04rem] max-[423px]:text-[0.945rem] max-[365px]:text-[0.88rem] font-semibold dark:font-medium line-clamp-1 min-[1425px]:text-[0.75rem] min-[1525px]:text-[0.8rem]"
-                    >{userName}</p>
-                </div>
-                <button className="py-2 mt-2 
-                border border-slate-900/30 dark:border-slate-50/30 rounded-lg
-                bg-slate-800 dark:bg-slate-100 hover:bg-slate-900 dark:hover:bg-slate-200 duration-300 ease-in-out
-                font-medium dark:font-bold
-                text-slate-50 dark:text-slate-800 
-                ">Exchange</button>
+
+                <Ratings
+                    ratings={ratings}
+                    ratingStyles={"mt-1 max-[561px]:text-lg max-[423px]:text-[1.035rem] max-[365px]:text-[0.98rem] min-[1425px]:text-[0.935rem] min-[1525px]:text-base"}
+                    addStarStyles={"max-w-6 max-[561px]:max-w-8 max-[423px]:max-w-7 max-[365px]:max-w-[1.613rem] min-[1425px]:max-w-[1.38rem] min-[1525px]:max-w-6"}
+                />
+
+                <User
+                    styles={"user flex items-center gap-1 max-[561px]:gap-2 max-[365px]:gap-1.5 min-[1425px]:gap-1.5 min-[1425px]:mt-1 min-[1525px]:mt-0"}
+                    userImg={userImg}
+                    userName={userName}
+                    addImgStyles={"max-w-8 max-[561px]:max-w-12 max-[423px]:max-w-11 max-[365px]:max-w-10 max-[355px]:max-w-9 min-[1425px]:max-w-7 min-[1525px]:max-w-8"}
+                    addUsernameStyles={"text-[0.8rem] max-[1080px]:text-[0.77rem] max-[1024px]:text-[0.9rem] max-[841px]:text-[0.865rem] max-[815px]:text-[0.825rem] max-[785px]:text-[0.89rem] max-[645px]:text-[0.85rem] max-[605px]:text-[0.815rem] max-[561px]:text-[1.04rem] max-[423px]:text-[0.945rem] max-[365px]:text-[0.88rem] line-clamp-1 min-[1425px]:text-[0.75rem] min-[1525px]:text-[0.8rem]"}
+                />
+
+                <ExchangeBtn addStyles={"py-2 mt-2"} />
             </div>
         </div>
     );
