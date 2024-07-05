@@ -30,7 +30,7 @@ export const Book = ({ key, bookImg, bookName, author, ratings, userImg, userNam
                 />
 
                 <User
-                    styles={"user flex items-center gap-1 max-[561px]:gap-2 max-[365px]:gap-1.5 min-[1425px]:gap-1.5 min-[1425px]:mt-1 min-[1525px]:mt-0"}
+                    styles={"user flex items-center gap-1.5 max-[561px]:gap-2 max-[365px]:gap-1.5 min-[1425px]:mt-1 min-[1525px]:mt-0"}
                     userImg={userImg}
                     userName={userName}
                     addImgStyles={"max-w-8 max-[561px]:max-w-12 max-[423px]:max-w-11 max-[365px]:max-w-10 max-[355px]:max-w-9 min-[1425px]:max-w-7 min-[1525px]:max-w-8"}
