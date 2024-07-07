@@ -1,4 +1,4 @@
-import { ExchangeBtn } from "../../custom_components/ExchangeBtn";
+import { Button } from "../../custom_components/Button";
 import { Ratings } from "../../custom_components/Ratings";
 import { User } from "../../custom_components/User";
 
@@ -37,7 +37,7 @@ export const Book = ({ key, bookImg, bookName, author, ratings, userImg, userNam
                     addUsernameStyles={"text-[0.8rem] max-[1080px]:text-[0.77rem] max-[1024px]:text-[0.9rem] max-[841px]:text-[0.865rem] max-[815px]:text-[0.825rem] max-[785px]:text-[0.89rem] max-[645px]:text-[0.85rem] max-[605px]:text-[0.815rem] max-[561px]:text-[1.04rem] max-[423px]:text-[0.945rem] max-[365px]:text-[0.88rem] line-clamp-1 min-[1425px]:text-[0.75rem] min-[1525px]:text-[0.8rem]"}
                 />
 
-                <ExchangeBtn addStyles={"py-2 mt-2"} />
+                <Button addStyles={"py-2 mt-2"} btnText={"Exchange"} />
             </div>
         </div>
     );

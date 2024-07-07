@@ -1,18 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { Navbar } from "./components/custom_components/Navbar";
 import { Home } from "./components/home/Home";
 import { Chats } from "./components/home/chats/Chats";
 import { Books } from "./components/home/books/Books";
+import { ListBook } from "./components/home/books/ListBook";
 
 import { FiSun } from "react-icons/fi";
 import { BsMoonStars } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 
-import userImg from "./assets/megan_hanson.jpg";
-
+// import userImg from "./assets/megan_hanson.jpg";
 
 import useThemeStore from "./stores/theme/ThemeStore";
+import { FlyoutMenu } from "./components/home/FlyoutMenu";
 
 
 
@@ -23,6 +24,8 @@ const App = () => {
     darkTheme: state.darkTheme,
     lightTheme: state.lightTheme
   }));
+
+  const [listBookState, setListBookState] = useState(false);
 
   // Change in theme
   useEffect(() => {
@@ -56,7 +59,8 @@ const App = () => {
             >
               {theme === "light" ? <BsMoonStars /> : <FiSun />}
             </button>
-            <div id="user" className="max-w-12 text-slate-800 dark:text-slate-100 border border-slate-900/30 dark:border-slate-50/30 rounded-full p-[0.025rem]"><img className="max-w-full rounded-full" src={userImg} alt="user-image" /></div>
+            <FlyoutMenu onListBookClick={() => setListBookState(true)} />
+            {/* <div id="user" className="max-w-12 text-slate-800 dark:text-slate-100 border border-slate-900/30 dark:border-slate-50/30 rounded-full p-[0.025rem]"><img className="max-w-full rounded-full" src={userImg} alt="user-image" /></div> */}
           </div>
         </Navbar>
       </header>
@@ -71,6 +75,7 @@ const App = () => {
         </Home>
 
       </main>
+      {listBookState && <ListBook setListBookState={setListBookState} />}
     </>
   );
 };

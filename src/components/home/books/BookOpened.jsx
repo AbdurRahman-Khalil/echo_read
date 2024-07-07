@@ -1,4 +1,4 @@
-import { ExchangeBtn } from "../../custom_components/ExchangeBtn";
+import { Button } from "../../custom_components/Button";
 import { Ratings } from "../../custom_components/Ratings";
 import { User } from "../../custom_components/User";
 import { Review } from "../../custom_components/Review";
@@ -54,7 +54,7 @@ export const BookOpened = () => {
                             <p className="font-medium min-[1000px]:max-[1100px]:text-[0.95rem] max-[522px]:text-[0.92rem] max-[384px]:text-[0.88rem]">On: <code>04-07-2024</code></p>
                         </div>
                     </div>
-                    <ExchangeBtn addStyles={"py-2.5 w-72 max-[464px]:w-full text-[1.05rem] max-[522px]:text-[1rem] max-[384px]:text-[0.96rem] max-[343px]:text-[0.925rem]"} />
+                    <Button btnText={"Exchange"} addStyles={"py-2.5 w-72 max-[464px]:w-full text-[1.05rem] max-[522px]:text-[1rem] max-[384px]:text-[0.96rem] max-[343px]:text-[0.925rem]"} />
                 </div>
             </div>
 
