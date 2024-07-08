@@ -4,6 +4,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import userImg from "../../assets/megan_hanson.jpg";
 
+import { CgProfile } from "react-icons/cg";
+
+import { PiBooks } from "react-icons/pi";
+
+import { HiOutlineViewGridAdd } from "react-icons/hi";
+import { TbLogout2 } from "react-icons/tb";
+import { LuMessagesSquare } from "react-icons/lu";
+
+
 
 export const FlyoutMenu = ({ onListBookClick }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -57,41 +66,52 @@ export const FlyoutMenu = ({ onListBookClick }) => {
                         exit="exit"
                         variants={menuVariants}
                         transition={{ duration: 0.2 }}
-                        className="origin-top-right absolute right-0 w-56 rounded-lg shadow-lg bg-slate-50 dark:bg-slate-950 ring-1 ring-slate-900/20 dark:ring-slate-50/20 text-slate-800 dark:text-slate-100 font-semibold dark:font-medium"
+                        className="origin-top-right absolute right-0 w-56 rounded-lg shadow-lg bg-slate-50 dark:bg-slate-950 ring-1 ring-slate-900/20 dark:ring-slate-50/20 text-slate-800 dark:text-slate-100 font-medium dark:font-normal"
                     >
                         <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                             <a
                                 href="#profile"
-                                className="block px-5 py-3 rounded-ss-md rounded-se-md hover:bg-slate-200/55 dark:hover:bg-slate-800/55 duration-300 ease-linear"
+                                className="pb-3.5 pt-4 rounded-ss-md rounded-se-md flyout-menu-item"
                                 role="menuitem"
                                 onClick={handleOptionClick}
                             >
+                                <CgProfile className='text-[1.4rem]' />
                                 Profile
                             </a>
                             <a
                                 href="#my-books"
-                                className="block px-5 py-3 hover:bg-slate-200/55 dark:hover:bg-slate-800/55 duration-300 ease-linear"
+                                className="py-3.5 flyout-menu-item"
                                 role="menuitem"
                                 onClick={handleOptionClick}
                             >
+                                <PiBooks className='text-[1.4rem]' />
                                 My Books
                             </a>
                             <a
-                                className="block px-5 py-3 hover:bg-slate-200/55 dark:hover:bg-slate-800/55 duration-300 ease-linear cursor-pointer"
+                                className="py-3.5 cursor-pointer flyout-menu-item"
                                 role="menuitem"
                                 onClick={() => {
                                     onListBookClick();
                                     handleOptionClick();
                                 }}
                             >
+                                <HiOutlineViewGridAdd className='text-[1.4rem]' />
                                 List Book
                             </a>
                             <a
-                                href="#logout"
-                                className="block px-5 py-3 rounded-es-md rounded-ee-md hover:bg-slate-200/55 dark:hover:bg-slate-800/55 duration-300 ease-linear"
+                                className="min-[785px]:hidden py-3.5 cursor-pointer flyout-menu-item"
                                 role="menuitem"
                                 onClick={handleOptionClick}
                             >
+                                <LuMessagesSquare className='text-[1.4rem]' />
+                                Chats
+                            </a>
+                            <a
+                                className="pt-3.5 pb-4 rounded-es-md rounded-ee-md cursor-pointer flyout-menu-item"
+                                role="menuitem"
+                                onClick={handleOptionClick}
+                            >
+                                <TbLogout2 className='text-[1.4rem]' />
                                 Logout
                             </a>
                         </div>
