@@ -29,7 +29,7 @@ export const Chat = () => {
     return (
         <div id="chat" className="fixed top-0 left-0 w-full min-h-dvh bg-slate-50 dark:bg-slate-950 p-0.5 pl-1 max-[785px]:pl-0 text-slate-800 dark:text-slate-100 font-semibold dark:font-medium z-40">
             <div className="ml-[13.22rem] dark:ml-[13.05rem] max-[785px]:ml-0 max-[785px]:dark:ml-0 -mt-[0.1rem] -mr-0.5 pt-[4.16rem] min-h-dvh flex flex-col bg-slate-200 dark:bg-slate-800">
-                <div className="border-b-2 border-b-slate-900/20 py-[0.1rem] dark:border-b-slate-50/20 bg-slate-50 dark:bg-slate-950 flex justify-between items-center">
+                <div className="border-b-2 border-slate-900/20 dark:border-slate-50/20 bg-slate-50 dark:bg-slate-950 py-[0.1rem] flex justify-between items-center">
                     <Contact
                         addStyles={"pl-3 dark:pl-3.5 max-[785px]:pl-3 pt-2 pb-2.5"}
                         peopleImg={megan_hanson}

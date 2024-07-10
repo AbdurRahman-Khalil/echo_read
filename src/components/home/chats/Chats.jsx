@@ -50,7 +50,7 @@ let peoples = [
 export const Chats = () => {
     return (
         <aside id="chats"
-            className="fixed top-0 left-0 z-50 max-[785px]:-left-[100%] max-w-fit border-r border-r-slate-900/30 dark:border-r-slate-50/30 pl-3 pr-6 mt-[4.18rem] 
+            className="fixed top-0 left-0 z-50 max-[785px]:-left-[100%] max-w-fit border-r border-slate-900/70 dark:border-slate-50/75 pl-3 pr-6 mt-[4.18rem] 
                         bg-slate-50 dark:bg-slate-950 min-h-full transition-all duration-500"
         >
             <h2 className="text-[2.15rem] text-slate-800 dark:text-slate-100 font-semibold dark:font-medium text-left mt-1.5 mb-5">Chats</h2>

@@ -74,6 +74,51 @@ const books = [
         userImg: u6,
         userName: "Julio Shaw"
     },
+    {
+        id: 6,
+        bookImg: b6,
+        bookName: "The Tales of Beedle The Bard",
+        author: "J.K. Rowling",
+        ratings: 4.5,
+        userImg: u6,
+        userName: "Julio Shaw"
+    },
+    {
+        id: 6,
+        bookImg: b6,
+        bookName: "The Tales of Beedle The Bard",
+        author: "J.K. Rowling",
+        ratings: 4.5,
+        userImg: u6,
+        userName: "Julio Shaw"
+    },
+    {
+        id: 6,
+        bookImg: b6,
+        bookName: "The Tales of Beedle The Bard",
+        author: "J.K. Rowling",
+        ratings: 4.5,
+        userImg: u6,
+        userName: "Julio Shaw"
+    },
+    {
+        id: 6,
+        bookImg: b6,
+        bookName: "The Tales of Beedle The Bard",
+        author: "J.K. Rowling",
+        ratings: 4.5,
+        userImg: u6,
+        userName: "Julio Shaw"
+    },
+    {
+        id: 6,
+        bookImg: b6,
+        bookName: "The Tales of Beedle The Bard",
+        author: "J.K. Rowling",
+        ratings: 4.5,
+        userImg: u6,
+        userName: "Julio Shaw"
+    },
 ];
 
 
@@ -81,7 +126,7 @@ export const Books = () => {
     return (
         <div id="books" className="mt-3 mr-3.5 ml-[14.25rem] max-[785px]:ml-3.5">
             <Categories />
-            <div id="books-container" className="grid grid-cols-3 max-[1024px]:grid-cols-2 max-[561px]:grid-cols-1 min-[1425px]:grid-cols-4  gap-3 mt-3.5">
+            <div id="books-container" className="grid grid-cols-3 max-[1024px]:grid-cols-2 max-[561px]:grid-cols-1 min-[1425px]:grid-cols-4 gap-3 mt-3.5">
                 {
                     books.map(book => (
                         <Book
