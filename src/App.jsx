@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import { Navbar } from "./components/custom_components/Navbar";
 import { Home } from "./components/home/Home";
 import { Chats } from "./components/home/chats/Chats";
+import { Chat } from "./components/home/chats/Chat";
 
-import { Books } from "./components/home/books/Books";
+// import { Books } from "./components/home/books/Books";
 import { ListBook } from "./components/home/books/ListBook";
 
 import { FiSun } from "react-icons/fi";
@@ -71,7 +72,8 @@ const App = () => {
 
         {/* if user is logged in */}
         <Home>
-          <Books />
+          {/* <Books /> */}
+          <Chat />
           <Chats />
         </Home>
 

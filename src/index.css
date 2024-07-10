@@ -24,4 +24,10 @@
     #categories::-webkit-scrollbar {
         display: none;
     }
+
+    /* #messages {
+        background-image: url("./assets/Light2.jpg");
+        background-size: cover;
+        background-position: center;        
+    } */
 }
