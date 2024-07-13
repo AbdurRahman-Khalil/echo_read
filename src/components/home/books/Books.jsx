@@ -1,5 +1,6 @@
 import { Categories } from "./categories/Categories";
 import { Book } from "./Book";
+// import { BookOpened } from "./BookOpened";
 
 import b1 from "../../../assets/books/book1.jpeg";
 import b2 from "../../../assets/books/book2.jpg";
@@ -14,7 +15,6 @@ import u3 from "../../../assets/leta_carpenter.jpg";
 import u4 from "../../../assets/owen_frazier.jpg";
 import u5 from "../../../assets/vickie_mckinney.jpg";
 import u6 from "../../../assets/julio_shaw.jpg";
-// import { BookOpened } from "./BookOpened";
 
 
 
