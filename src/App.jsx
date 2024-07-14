@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-
-import useThemeStore from "./stores/theme/ThemeStore";
+import { useState } from "react";
 
 import { Navbar } from "./components/custom_components/Navbar";
 import { Home } from "./components/home/Home";
@@ -9,36 +7,14 @@ import { Home } from "./components/home/Home";
 import { ListBook } from "./components/home/books/ListBook";
 import { FlyoutMenu } from "./components/home/FlyoutMenu";
 import { Profile } from "./components/Profile";
-
-import { FiSun } from "react-icons/fi";
-import { BsMoonStars } from "react-icons/bs";
-import { FiSearch } from "react-icons/fi";
-
+import { SearchBar } from "./components/home/SearchBar";
+import { ThemeBtn } from "./components/home/ThemeBtn";
 
 
 
 const App = () => {
 
-  const { theme, darkTheme, lightTheme } = useThemeStore((state) => ({
-    theme: state.theme,
-    darkTheme: state.darkTheme,
-    lightTheme: state.lightTheme
-  }));
-
   const [listBookState, setListBookState] = useState(false);
-
-  // Change in theme
-  useEffect(() => {
-    const htmlTree = document.querySelector("html");
-
-    htmlTree.classList.remove("dark", "light");
-    htmlTree.classList.add(theme);
-
-  }, [theme]);
-
-  const handleTheme = () => {
-    theme === "light" ? darkTheme() : lightTheme();
-  }
 
 
   return (
@@ -48,17 +24,12 @@ const App = () => {
           styles={"flex justify-between items-center border-b border-slate-900/70 dark:border-slate-50/75 px-3 pt-[0.4rem] pb-[0.3rem] fixed top-0 left-0 w-full z-50 bg-slate-50/40 dark:bg-slate-950/40 backdrop-blur-[7rem] transition-all duration-500"}
         >
           <h1 className="text-[2.35rem] text-slate-800 dark:text-slate-100 font-bold font-playwriteNGModern -mt-[0.1rem] cursor-pointer">EchoRead</h1>
-          <div className="flex gap-6 items-center">
-            <form className="flex items-center border border-slate-900/30 dark:border-slate-50/30 pr-3 rounded-lg w-[22rem] bg-slate-50/5 dark:bg-slate-950/5 transition-all duration-500">
-              <input className="px-3 py-[0.65rem] w-full outline-none rounded-s-lg text-[0.91rem] text-slate-800 dark:text-slate-100 font-semibold dark:font-medium backdrop-blur-xl bg-slate-50/25 dark:bg-slate-950/25" type="text" name="search" id="search" placeholder="Search Books" />
-              <button className="px-3 py-2 -mr-3 bg-sky-300 rounded-e-lg border border-sky-300"><FiSearch className="mb-0.5 text-[1.45rem] text-slate-100 dark:text-slate-800" /></button>
-            </form>
-            <button
-              className="text-slate-800 dark:text-slate-100 text-lg border border-slate-900/30 dark:border-slate-50/30 rounded-full -ml-2.5 p-[0.7rem] transition-all duration-500"
-              onClick={handleTheme}
-            >
-              {theme === "light" ? <BsMoonStars /> : <FiSun />}
-            </button>
+          <div className="flex gap-6 max-[780px]:gap-[1.1rem] items-center">
+            <SearchBar />
+            <ThemeBtn
+              addStyles={"text-lg -ml-2.5 border border-slate-900/30 dark:border-slate-50/30 rounded-full"}
+              hideSeek={"max-[390px]:hidden"}
+            />
             <FlyoutMenu onListBookClick={() => setListBookState(true)} />
           </div>
         </Navbar>

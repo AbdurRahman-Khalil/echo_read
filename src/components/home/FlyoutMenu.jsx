@@ -1,13 +1,13 @@
-// FlyoutMenu.js
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { ThemeBtn } from './ThemeBtn';
+
 import userImg from "../../assets/megan_hanson.jpg";
 
+import { HiOutlineHome } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
-
 import { PiBooks } from "react-icons/pi";
-
 import { HiOutlineViewGridAdd } from "react-icons/hi";
 import { TbLogout2 } from "react-icons/tb";
 import { LuMessagesSquare } from "react-icons/lu";
@@ -51,7 +51,7 @@ export const FlyoutMenu = ({ onListBookClick }) => {
             <div>
                 <button
                     type="button"
-                    className="max-w-12 border border-slate-900/30 dark:border-slate-50/30 rounded-full p-[0.025rem]"
+                    className="max-w-12 border border-slate-900/30 dark:border-slate-50/30 rounded-full p-[0.02rem]"
                     onClick={toggleMenu}
                 >
                     <img className="max-w-full rounded-full" src={userImg} alt="user-image" />
@@ -68,10 +68,23 @@ export const FlyoutMenu = ({ onListBookClick }) => {
                         transition={{ duration: 0.2 }}
                         className="origin-top-right absolute right-0 w-56 rounded-lg shadow-lg bg-slate-50 dark:bg-slate-950 ring-1 ring-slate-900/20 dark:ring-slate-50/20 text-slate-800 dark:text-slate-100 font-medium dark:font-normal"
                     >
-                        <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                        <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu" className='relative'>
+                            <ThemeBtn
+                                addStyles={"text-[1.35rem] dark:text-[1.4rem] absolute top-0 right-0 pt-4 rounded-se-lg"}
+                                hideSeek={"hidden max-[390px]:block"}
+                            />
+                            <a
+                                href="#home"
+                                className="pb-3.5 pt-4 rounded-ss-md rounded-se-md flyout-menu-item"
+                                role="menuitem"
+                                onClick={handleOptionClick}
+                            >
+                                <HiOutlineHome className='text-[1.4rem]' />
+                                Home
+                            </a>
                             <a
                                 href="#profile"
-                                className="pb-3.5 pt-4 rounded-ss-md rounded-se-md flyout-menu-item"
+                                className="py-3.5 flyout-menu-item"
                                 role="menuitem"
                                 onClick={handleOptionClick}
                             >
