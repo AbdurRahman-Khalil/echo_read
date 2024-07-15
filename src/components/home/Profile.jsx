@@ -1,27 +1,27 @@
 import { motion } from 'framer-motion';
 
-import { User } from "./custom_components/User";
-import { Gmail } from "./custom_components/logos/Gmail";
-import { Instagram } from "./custom_components/logos/Instagram";
-import { TwitterX } from "./custom_components/logos/TwitterX";
+import { User } from "../custom_components/User";
+import { Gmail } from "../custom_components/logos/Gmail";
+import { Instagram } from "../custom_components/logos/Instagram";
+import { TwitterX } from "../custom_components/logos/TwitterX";
 // import { books } from "./home/books/Books/books";
 
-import vickie_mckinney from "../assets/vickie_mckinney.jpg";
-import star from "../assets/ratings/star.png";
+import vickie_mckinney from "../../assets/vickie_mckinney.jpg";
+import star from "../../assets/ratings/star.png";
 
-import b1 from "../assets/books/book1.jpeg";
-import b2 from "../assets/books/book2.jpg";
-import b3 from "../assets/books/book3.jpg";
-import b4 from "../assets/books/book4.jpeg";
-import b5 from "../assets/books/book5.jpeg";
-import b6 from "../assets/books/book6.jpeg";
+import b1 from "../../assets/books/book1.jpeg";
+import b2 from "../../assets/books/book2.jpg";
+import b3 from "../../assets/books/book3.jpg";
+import b4 from "../../assets/books/book4.jpeg";
+import b5 from "../../assets/books/book5.jpeg";
+import b6 from "../../assets/books/book6.jpeg";
 
-import u1 from "../assets/megan_hanson.jpg";
-import u2 from "../assets/willard_arnold.jpg";
-import u3 from "../assets/leta_carpenter.jpg";
-import u4 from "../assets/owen_frazier.jpg";
-import u5 from "../assets/vickie_mckinney.jpg";
-import u6 from "../assets/julio_shaw.jpg";
+import u1 from "../../assets/megan_hanson.jpg";
+import u2 from "../../assets/willard_arnold.jpg";
+import u3 from "../../assets/leta_carpenter.jpg";
+import u4 from "../../assets/owen_frazier.jpg";
+import u5 from "../../assets/vickie_mckinney.jpg";
+import u6 from "../../assets/julio_shaw.jpg";
 
 import { FiEdit } from "react-icons/fi";
 import { BsGenderFemale } from "react-icons/bs";
@@ -31,6 +31,7 @@ import { BsTelephone } from "react-icons/bs";
 import { GiBlackBook } from "react-icons/gi";
 import { CgTrash } from "react-icons/cg";
 import { IoArrowBackOutline } from "react-icons/io5";
+
 
 
 const books = [
@@ -118,7 +119,7 @@ export const Profile = () => {
         <div className="min-h-fit flex max-[555px]:flex-col gap-10 max-[555px]:gap-3 mx-3.5 pt-1 text-slate-800 dark:text-slate-100 font-semibold dark:font-medium">
             <div id="profile">
                 <h2 className="flex items-center gap-5 text-[2.25rem] max-[1000px]:text-[2.035rem] max-[825px]:text-[2.125rem] max-[690px]:text-[2.04rem] max-[555px]:text-[2.25rem] py-1">
-                    <IoArrowBackOutline className="text-[1.8rem] -ml-0.5 cursor-pointer" />
+                    <IoArrowBackOutline className="text-[1.8rem] -ml-0.5 hover:scale-x-[1.15] hover:-translate-x-1 duration-200 ease-linear cursor-pointer" />
                     Profile
                 </h2>
 
@@ -131,16 +132,28 @@ export const Profile = () => {
                         addImgStyles={"max-w-[5.5rem]"}
                         addUsernameStyles={"text-[1.35rem] max-[1000px]:text-[1.28rem] max-[960px]:text-[1.235rem] max-[825px]:text-[1.265rem] max-[690px]:text-[1.275rem] max-[555px]:text-[1.35rem]"}
                     />
-                    <div className="my-3.5 bg-slate-500/25 max-w-full p-[0.05rem]"></div>
+                    <div className="my-3.5 p-[0.05rem] bg-slate-500/25 max-w-full rounded-full"></div>
                     <div className="user-info text-[1.13rem] space-y-5 px-1 max-w-full">
                         <div className="info space-y-1.5">
                             <p className="relative before:absolute before:top-[0.2rem] before:-left-[0.41rem] dark:before:-left-[0.47rem] before:w-1 before:h-5 before:bg-slate-800 dark:before:bg-slate-100 before:rounded-full"
                             >Information</p>
                             <div className="text-[0.95rem] space-y-2 font-medium dark:font-normal">
-                                <div className="flex gap-2"><BsGenderFemale className="text-[1.3rem]" /><p className="font-semibold dark:font-medium text-[0.915rem]">Female</p></div>
-                                <div className="flex gap-2"><PiCake className="text-[1.3rem]" /><p className="font-semibold dark:font-medium text-[0.915rem]">April 13, 1992</p></div>
-                                <div className="flex gap-2"><GiBlackBook className="text-[1.3rem]" /><p className="font-semibold dark:font-medium text-[0.915rem]">06</p></div>
-                                <div className="flex gap-2"><SlLocationPin className="text-[1.3rem]" /><p className="font-semibold dark:font-medium text-[0.915rem]">Hong Kong, China</p></div>
+                                <div className="flex gap-2">
+                                    <BsGenderFemale className="text-[1.3rem]" />
+                                    <p className="font-semibold dark:font-medium text-[0.915rem]">Female</p>
+                                </div>
+                                <div className="flex gap-2">
+                                    <PiCake className="text-[1.3rem]" />
+                                    <p className="font-semibold dark:font-medium text-[0.915rem]">April 13, 1992</p>
+                                </div>
+                                <div className="flex gap-2">
+                                    <GiBlackBook className="text-[1.3rem]" />
+                                    <p className="font-semibold dark:font-medium text-[0.915rem]">06</p>
+                                </div>
+                                <div className="flex gap-2">
+                                    <SlLocationPin className="text-[1.3rem]" />
+                                    <p className="font-semibold dark:font-medium text-[0.915rem]">Hong Kong, China</p>
+                                </div>
                             </div>
                         </div>
                         <div className="contact-info space-y-1.5">

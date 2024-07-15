@@ -1,24 +1,20 @@
 import { Button } from "../../custom_components/Button";
 import { Ratings } from "../../custom_components/Ratings";
 import { User } from "../../custom_components/User";
-import { Review } from "../../custom_components/Review";
+import { BookReviews } from "./BookReviews";
 
 import b6 from "../../../assets/books/book6.jpeg";
 import u1 from "../../../assets/megan_hanson.jpg";
-import u2 from "../../../assets/willard_arnold.jpg";
-import u3 from "../../../assets/leta_carpenter.jpg";
-import u4 from "../../../assets/owen_frazier.jpg";
-import u5 from "../../../assets/vickie_mckinney.jpg";
 
-import { MdKeyboardBackspace } from "react-icons/md";
+import { IoArrowBackOutline } from "react-icons/io5";
 import { GiBlackBook } from "react-icons/gi";
 
 
 
 export const BookOpened = () => {
     return (
-        <div className="mt-4 p-3 pt-2 px-4 text-slate-800 dark:text-slate-100 rounded-lg border border-slate-900/20 dark:border-slate-50/20">
-            <MdKeyboardBackspace className="text-[2rem] mb-4" />
+        <div className="my-4 p-3 pt-2 px-4 text-slate-800 dark:text-slate-100 rounded-lg border border-slate-900/20 dark:border-slate-50/20">
+            <IoArrowBackOutline className="text-[1.9rem] mt-0.5 mb-4 hover:scale-x-[1.15] hover:-translate-x-1 duration-200 ease-linear cursor-pointer" />
             <div className="top flex justify-between max-[1000px]:flex-col max-[1000px]:gap-10 duration-300 ease-linear">
                 <div className="top-left flex gap-4 max-[343px]:gap-3 max-w-[48%] max-[1100px]:max-w-[53%] max-[1000px]:max-w-[70%] max-[850px]:max-w-[75%] max-[635px]:max-w-[79%] max-[522px]:max-w-[83%] max-[464px]:max-w-[100%]">
                     <div className="book-open-img duration-300 ease-linear max-w-[33%] max-[1200px]:max-w-[38%] max-[1000px]:max-w-[35%] max-[850px]:max-w-[40%] max-[635px]:max-w-[43%] max-[522px]:max-w-[45%] max-[464px]:max-w-[43%] max-[343px]:max-w-[41%]">
@@ -59,39 +55,12 @@ export const BookOpened = () => {
             </div>
 
             <div className="bottom mt-12">
-                <div className="description mb-8">
+                <div id="description" className="mb-8">
                     <h2 className="text-[1.875rem] max-[522px]:text-[1.64rem] max-[384px]:text-[1.47rem] max-[343px]:text-[1.375rem] font-semibold dark:font-medium mb-1">Description</h2>
                     <p className="font-medium dark:font-normal max-[522px]:text-[0.96rem] max-[384px]:text-[0.93rem]">"The Tales of Beedle the Bard" is a collection of five wizarding fairy tales written by J.K. Rowling. Each story imparts moral lessons with a magical twist, beloved in the wizarding world of Harry Potter. The book includes "The Tale of the Three Brothers," which plays a significant role in the series' final installment. With illustrations and annotations by Albus Dumbledore, the book offers insights into the magical lore and traditions of the wizarding world. Rowling's enchanting storytelling brings these tales to life, making them timeless and captivating. The moral lessons embedded within the stories are both profound and thought-provoking. This collection is a charming and whimsical addition to the Harry Potter universe, appealing to fans of all ages. It is a must-have for anyone who loves the magic and wonder of Rowling's world.</p>
                 </div>
 
-                <div className="reviews">
-                    <h2 className="text-[1.875rem] max-[522px]:text-[1.64rem] max-[384px]:text-[1.47rem] max-[343px]:text-[1.375rem] font-semibold dark:font-medium -mb-1">Reviews</h2>
-                    <Review
-                        userImg={u1}
-                        userName={"Megan Hanson"}
-                        theReview={`${"The Tales of Beedle the Bard"} is a delightful addition to the Harry Potter series. The fairy tales are charming, each carrying a unique moral lesson. Rowling's storytelling shines through, making it a must-read for fans. The illustrations and Dumbledore's notes add a rich, immersive layer. Perfect for readers of all ages.`}
-                    />
-                    <Review
-                        userImg={u2}
-                        userName={"Willard Arnold"}
-                        theReview={`This book is a magical treat for Harry Potter enthusiasts. The tales are whimsical and filled with enchanting details. I loved how each story conveyed meaningful messages. Dumbledore's commentary provided fascinating insights. It's a wonderful companion to the original series.`}
-                    />
-                    <Review
-                        userImg={u3}
-                        userName={"Leta Carpenter"}
-                        theReview={`${"The Tales of Beedle the Bard"} captivated me from the first page. The stories are simple yet profound, reminiscent of classic fairy tales. Rowling's creativity is evident in every tale. The added notes from Dumbledore offer a deeper understanding. A must-have for any Potterhead's collection.`}
-                    />
-                    <Review
-                        userImg={u4}
-                        userName={"Owen Frazier"}
-                        theReview={`A charming collection of wizarding fairy tales, this book exceeded my expectations. Each story is well-crafted and engaging. The moral lessons are cleverly woven into the narrative. I particularly enjoyed the annotations by Albus Dumbledore. It's a fantastic addition to the Harry Potter world.`}
-                    />
-                    <Review
-                        userImg={u5}
-                        userName={"Vickie Mckinney"}
-                        theReview={`${"The Tales of Beedle the Bard"} is a gem for both young readers and adults. The stories are enchanting and beautifully written. Rowling's imagination knows no bounds, as evidenced by these magical tales. The illustrations are a lovely touch. It's a delightful read that complements the Harry Potter series perfectly.`}
-                    />
-                </div>
+                <BookReviews />
             </div>
         </div>
     );

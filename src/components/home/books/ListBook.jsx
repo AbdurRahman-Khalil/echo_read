@@ -1,8 +1,9 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { IoClose } from "react-icons/io5";
-import { Button } from "../../custom_components/Button";
 import { motion } from 'framer-motion';
+
+import { Button } from "../../custom_components/Button";
+import { IoClose } from "react-icons/io5";
 
 
 
