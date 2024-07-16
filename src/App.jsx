@@ -2,11 +2,11 @@ import { useState } from "react";
 
 import { Navbar } from "./components/custom_components/Navbar";
 import { Home } from "./components/home/Home";
-import { Chats } from "./components/home/chats/Chats";
-import { Books } from "./components/home/books/Books";
+// import { Chats } from "./components/home/chats/Chats";
+// import { Books } from "./components/home/books/Books";
 import { ListBook } from "./components/home/books/ListBook";
 import { FlyoutMenu } from "./components/home/FlyoutMenu";
-// import { Profile } from "./components/home/Profile";
+import { Profile } from "./components/home/profile/Profile";
 import { SearchBar } from "./components/home/SearchBar";
 import { ThemeBtn } from "./components/home/ThemeBtn";
 
@@ -40,9 +40,9 @@ const App = () => {
 
         {/* if user is logged in */}
         <Home>
-          <Books />
-          <Chats /> 
-          {/* <Profile /> */}
+          {/* <Books /> */}
+          {/* <Chats />  */}
+          <Profile />
         </Home>
 
       </main>
