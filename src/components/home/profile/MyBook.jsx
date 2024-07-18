@@ -1,3 +1,5 @@
+import useBookStore from "../../../stores/books/BookStore";
+
 import { motion } from 'framer-motion';
 
 import star from "../../../assets/ratings/star.png";
@@ -28,10 +30,17 @@ const itemAnimations = {
 }
 
 
-export const MyBook = ({ key, bookImg, bookName, author, ratings }) => {
+export const MyBook = ({ id, key, bookImg, bookName, author, ratings }) => {
+    const { deleteBook } = useBookStore((state) => ({
+        deleteBook: state.deleteBook,
+    }));
+    
     return (
         <div key={key} className="book relative text-slate-100 rounded-xl border border-slate-900/15 dark:border-slate-50/15 cursor-pointer">
-            <CgTrash className="absolute top-0 right-0 text-[2.35rem] bg-slate-50/10 backdrop-blur-3xl rounded-se-xl rounded-es-xl px-2 py-1 z-20 cursor-pointer hover:text-red-300 duration-200 ease-linear" />
+            <CgTrash 
+                className="absolute top-0 right-0 text-[2.35rem] bg-slate-50/10 backdrop-blur-3xl rounded-se-xl rounded-es-xl px-2 py-1 z-20 cursor-pointer hover:text-red-300 duration-200 ease-linear"
+                onClick={() => deleteBook(id)}
+            />
             <img className="max-w-full min-h-full object-cover rounded-xl" src={bookImg} alt={bookName + "'s image"} />
             <motion.div
                 className="book-text absolute top-0 left-0 flex flex-col gap-2 justify-center items-center w-full min-h-full bg-slate-950/20 dark:bg-slate-950/25 backdrop-blur-xl rounded-xl px-2.5"

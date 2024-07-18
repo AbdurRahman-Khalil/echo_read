@@ -5,7 +5,7 @@ import { User } from "./User";
 
 export const Review = ({ key, userImg, userName, theReview, date }) => {
     return (
-        <motion.div 
+        <motion.li 
             key={key} 
             className="review space-y-3 max-[600px]:space-y-4 mt-4 p-3.5 bg-slate-100/50 dark:bg-slate-900/40 rounded-lg border border-slate-900/15 dark:border-slate-50/15"
             initial={{ opacity: 0, y: -20 }}
@@ -29,6 +29,6 @@ export const Review = ({ key, userImg, userName, theReview, date }) => {
                 <p className="text-slate-400 max-[522px]:text-[0.96rem] max-[384px]:text-[0.93rem]">{date}</p>
             </div>
             <p className="text-[0.93rem] max-[522px]:text-[0.92rem] max-[384px]:text-[0.9rem] font-medium dark:font-normal">{theReview}</p>
-        </motion.div>
+        </motion.li>
     );
 };

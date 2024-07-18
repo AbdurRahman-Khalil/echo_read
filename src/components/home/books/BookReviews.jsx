@@ -32,30 +32,35 @@ const allReviews = [
         userImg: u1,
         userName: "Megan Hanson",
         theReview: `${"The Tales of Beedle the Bard"} is a delightful addition to the Harry Potter series. The fairy tales are charming, each carrying a unique moral lesson. Rowling's storytelling shines through, making it a must-read for fans. The illustrations and Dumbledore's notes add a rich, immersive layer. Perfect for readers of all ages.`,
+        reviewDate: "Tuesday, 18 July 2024",
     },
     {
         id: 2,
         userImg: u2,
         userName: "Willard Arnold",
         theReview: `This book is a magical treat for Harry Potter enthusiasts. The tales are whimsical and filled with enchanting details. I loved how each story conveyed meaningful messages. Dumbledore's commentary provided fascinating insights. It's a wonderful companion to the original series.`,
+        reviewDate: "Sunday, 15 March 2024",
     },
     {
         id: 3,
         userImg: u3,
         userName: "Leta Carpenter",
         theReview: `${"The Tales of Beedle the Bard"} captivated me from the first page. The stories are simple yet profound, reminiscent of classic fairy tales. Rowling's creativity is evident in every tale. The added notes from Dumbledore offer a deeper understanding. A must-have for any Potterhead's collection.`,
+        reviewDate: "Saturday, 8 August 2023",
     },
     {
         id: 4,
         userImg: u4,
         userName: "Owen Frazier",
         theReview: `A charming collection of wizarding fairy tales, this book exceeded my expectations. Each story is well-crafted and engaging. The moral lessons are cleverly woven into the narrative. I particularly enjoyed the annotations by Albus Dumbledore. It's a fantastic addition to the Harry Potter world.`,
+        reviewDate: "Thursday, 10 April 2024",
     },
     {
         id: 5,
         userImg: u5,
         userName: "Vickie Mckinney",
         theReview: `${"The Tales of Beedle the Bard"} is a gem for both young readers and adults. The stories are enchanting and beautifully written. Rowling's imagination knows no bounds, as evidenced by these magical tales. The illustrations are a lovely touch. It's a delightful read that complements the Harry Potter series perfectly.`,
+        reviewDate: "Monday, 12 June 2024",
     },
 ];
 
@@ -163,7 +168,7 @@ export const BookReviews = () => {
 
             {/* <div className="mt-7 mb-[1.1rem] p-[0.08rem] mx-auto bg-slate-500/25 max-w-[80%] rounded-full"></div> */}
 
-            <div>
+            <ul className="list-none">
                 <p className="font-semibold dark:font-medium tracking-wide">Total Reviews: {reviews.length}</p>
             <AnimatePresence>
             {
@@ -178,7 +183,7 @@ export const BookReviews = () => {
                 ))
             }
             </AnimatePresence>
-            </div>            
+            </ul>            
         </div>
     )
 }

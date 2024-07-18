@@ -1,25 +1,15 @@
+import useBookStore from "../../../stores/books/BookStore";
 
 import { User } from "../../custom_components/User";
+import { Info } from './Info';
+import { ContactInfo } from './ContactInfo';
+import { MyBook } from "./MyBook";
 import { Gmail } from "../../custom_components/logos/Gmail";
 import { Instagram } from "../../custom_components/logos/Instagram";
 import { TwitterX } from "../../custom_components/logos/TwitterX";
 // import { books } from "./home/books/Books/books";
 
 import vickie_mckinney from "../../../assets/vickie_mckinney.jpg";
-
-import b1 from "../../../assets/books/book1.jpeg";
-import b2 from "../../../assets/books/book2.jpg";
-import b3 from "../../../assets/books/book3.jpg";
-import b4 from "../../../assets/books/book4.jpeg";
-import b5 from "../../../assets/books/book5.jpeg";
-import b6 from "../../../assets/books/book6.jpeg";
-
-import u1 from "../../../assets/megan_hanson.jpg";
-import u2 from "../../../assets/willard_arnold.jpg";
-import u3 from "../../../assets/leta_carpenter.jpg";
-import u4 from "../../../assets/owen_frazier.jpg";
-import u5 from "../../../assets/vickie_mckinney.jpg";
-import u6 from "../../../assets/julio_shaw.jpg";
 
 import { FiEdit } from "react-icons/fi";
 import { BsGenderFemale } from "react-icons/bs";
@@ -28,78 +18,25 @@ import { PiCake } from "react-icons/pi";
 import { BsTelephone } from "react-icons/bs";
 import { GiBlackBook } from "react-icons/gi";
 import { IoArrowBackOutline } from "react-icons/io5";
-import { Info } from './Info';
-import { ContactInfo } from './ContactInfo';
-import { MyBook } from "./MyBook";
+import { HiOutlineSquaresPlus } from "react-icons/hi2";
 
 
 
-const books = [
-    {
-        id: 1,
-        bookImg: b1,
-        bookName: "Lethal White",
-        author: "Robert Galbraith",
-        ratings: 4.6,
-        userImg: u1,
-        userName: "Megan Hanson"
-    },
-    {
-        id: 2,
-        bookImg: b2,
-        bookName: "The Cuckoo Calling",
-        author: "Robert Galbraith",
-        ratings: 3.6,
-        userImg: u2,
-        userName: "Willard Arnold"
-    },
-    {
-        id: 3,
-        bookImg: b3,
-        bookName: "The Casual Vacancy",
-        author: "J.K. Rowling",
-        ratings: 2.8,
-        userImg: u3,
-        userName: "Leta Carpenter"
-    },
-    {
-        id: 4,
-        bookImg: b4,
-        bookName: "Wuthering Heights",
-        author: "Thrushcross Grange",
-        ratings: 5,
-        userImg: u4,
-        userName: "Owen Frazier"
-    },
-    {
-        id: 5,
-        bookImg: b5,
-        bookName: "Soldier Island",
-        author: "Thrushcross Grange",
-        ratings: 2.5,
-        userImg: u5,
-        userName: "Vickie Mckinney"
-    },
-    {
-        id: 6,
-        bookImg: b6,
-        bookName: "The Tales of Beedle The Bard",
-        author: "J.K. Rowling",
-        ratings: 4.5,
-        userImg: u6,
-        userName: "Julio Shaw"
-    },
-];
+export const Profile = ({ setOpenProfile, setListBookState }) => {
+    const { myBooks } = useBookStore((state) => ({
+        myBooks: state.myBooks,
+    }));
 
 
 
-
-export const Profile = () => {
     return (
         <div className="min-h-fit flex max-[555px]:flex-col gap-10 max-[555px]:gap-3 mx-3.5 pt-1 text-slate-800 dark:text-slate-100 font-semibold dark:font-medium">
             <div id="profile">
                 <h2 className="flex items-center gap-5 text-[2.25rem] max-[1000px]:text-[2.035rem] max-[825px]:text-[2.125rem] max-[690px]:text-[2.04rem] max-[555px]:text-[2.25rem] py-1">
-                    <IoArrowBackOutline className="text-[1.8rem] -ml-0.5 hover:scale-x-[1.15] hover:-translate-x-1 duration-200 ease-linear cursor-pointer" />
+                    <IoArrowBackOutline
+                        className="text-[1.8rem] -ml-0.5 hover:scale-x-[1.15] hover:-translate-x-1 duration-200 ease-linear cursor-pointer"
+                        onClick={() => setOpenProfile(false)}
+                    />
                     Profile
                 </h2>
 
@@ -128,7 +65,7 @@ export const Profile = () => {
                                 />
                                 <Info
                                     infoIcon={<GiBlackBook className="text-[1.3rem]" />}
-                                    infoText={6}
+                                    infoText={myBooks.length}
                                 />
                                 <Info
                                     infoIcon={<SlLocationPin className="text-[1.3rem]" />}
@@ -165,20 +102,26 @@ export const Profile = () => {
             </div>
 
             <div id="my-books">
-                <h2 className="text-[2.25rem] max-[1000px]:text-[2.035rem] max-[825px]:text-[2.125rem] max-[690px]:text-[2.04rem] max-[555px]:text-[2.25rem] py-1">
+                <h2 className="flex justify-between items-center min-[556px]:max-[650px]:flex-col min-[556px]:max-[650px]:items-start text-[2.25rem] max-[1000px]:text-[2.035rem] max-[825px]:text-[2.125rem] max-[690px]:text-[2.04rem] max-[555px]:text-[2.25rem] py-1">
                     My Books
+                    <HiOutlineSquaresPlus className="min-[556px]:max-[650px]:mt-2 text-[2.1rem] text-sky-400/80 dark:text-sky-400 hover:text-sky-300/75 dark:hover:text-sky-300 duration-200 ease-linear cursor-pointer" onClick={() => setListBookState(true)} />
                 </h2>
                 <div className="books mt-1.5 mb-4 grid grid-cols-5 max-[1150px]:grid-cols-4 max-[960px]:grid-cols-3 max-[825px]:grid-cols-2 max-[660px]:grid-cols-1 max-[555px]:grid-cols-3 max-[465px]:grid-cols-2 gap-4 max-[555px]:gap-3 max-[465px]:gap-3.5 min-[1425px]:grid-cols-6 min-[1600px]:grid-cols-7">
                     {
-                        books.map(book => (
-                            <MyBook
-                                key={book.id}
-                                bookImg={book.bookImg}
-                                bookName={book.bookName}
-                                author={book.author}
-                                ratings={book.ratings}
-                            />
-                        ))
+                        myBooks.length < 1
+                            ?
+                            <p className="col-span-2 text-slate-400 font-medium ">You have not listed any books</p> 
+                            :
+                            myBooks.map(myBook => (
+                                <MyBook
+                                    id={myBook.id}
+                                    key={myBook.id}
+                                    bookImg={myBook.bookImg}
+                                    bookName={myBook.bookName}
+                                    author={myBook.author}
+                                    ratings={myBook.ratings}
+                                />
+                            ))
                     }
                 </div>
             </div>

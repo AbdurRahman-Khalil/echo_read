@@ -14,7 +14,7 @@ import { LuMessagesSquare } from "react-icons/lu";
 
 
 
-export const FlyoutMenu = ({ onListBookClick }) => {
+export const FlyoutMenu = ({ setOpenProfile, onOpenProfileClick, onListBookClick }) => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
 
@@ -77,7 +77,10 @@ export const FlyoutMenu = ({ onListBookClick }) => {
                                 href="#home"
                                 className="pb-3.5 pt-4 rounded-ss-md rounded-se-md flyout-menu-item"
                                 role="menuitem"
-                                onClick={handleOptionClick}
+                                onClick={() => {
+                                    setOpenProfile(false);
+                                    handleOptionClick();
+                                }}
                             >
                                 <HiOutlineHome className='text-[1.4rem]' />
                                 Home
@@ -86,7 +89,10 @@ export const FlyoutMenu = ({ onListBookClick }) => {
                                 href="#profile"
                                 className="py-3.5 flyout-menu-item"
                                 role="menuitem"
-                                onClick={handleOptionClick}
+                                onClick={() => {
+                                    handleOptionClick();
+                                    onOpenProfileClick();
+                                }}
                             >
                                 <CgProfile className='text-[1.4rem]' />
                                 Profile
@@ -95,7 +101,10 @@ export const FlyoutMenu = ({ onListBookClick }) => {
                                 href="#my-books"
                                 className="py-3.5 flyout-menu-item"
                                 role="menuitem"
-                                onClick={handleOptionClick}
+                                onClick={() => {
+                                    handleOptionClick();
+                                    onOpenProfileClick();
+                                }}
                             >
                                 <PiBooks className='text-[1.4rem]' />
                                 My Books

@@ -3,11 +3,11 @@ import { Ratings } from "../../custom_components/Ratings";
 import { User } from "../../custom_components/User";
 import { BookReviews } from "./BookReviews";
 
-import b6 from "../../../assets/books/book6.jpeg";
+import b6 from "../../../assets/books/book3.jpg";
 import u1 from "../../../assets/megan_hanson.jpg";
 
 import { IoArrowBackOutline } from "react-icons/io5";
-import { GiBlackBook } from "react-icons/gi";
+import { GiBlackBook } from "react-icons/gi";   
 
 
 
@@ -22,8 +22,8 @@ export const BookOpened = () => {
                     </div>
                     <div className="book-text flex-1 flex flex-col justify-between">
                         <div>
-                            <h1 className="text-[2.3rem] min-[1000px]:max-[1100px]:text-[2.1rem] max-[850px]:text-[2.1rem] max-[785px]:text-[2.7rem] max-[635px]:text-[2.4rem] max-[522px]:text-[2.1rem] max-[384px]:text-[1.8rem] max-[343px]:text-[1.6rem] leading-[2.8rem] min-[1000px]:max-[1100px]:leading-[2.7rem] max-[850px]:leading-[2.6rem] max-[785px]:leading-[3.3rem] max-[635px]:leading-[2.9rem] max-[522px]:leading-[2.6rem] max-[384px]:leading-[2.25rem] max-[343px]:leading-[2rem] duration-300 ease-linear font-bold dark:font-semibold">The Tales of Beedle The Bard</h1>
-                            <p className="text-[1.3rem] min-[1000px]:max-[1100px]:text-[1.2rem] max-[850px]:text-[1.2rem] max-[785px]:text-[1.4rem] max-[635px]:text-[1.25rem] max-[522px]:text-[1.1rem] max-[384px]:text-[1rem] max-[343px]:text-[0.962rem] duration-300 ease-linear font-semibold dark:font-medium mt-0.5 max-[850px]:mt-1 max-[785px]:mt-1.5 max-[343px]:mt-1">J.K. Rowling</p>
+                            <h1 className="text-[2.3rem] min-[1000px]:max-[1100px]:text-[2.1rem] max-[850px]:text-[2.1rem] max-[785px]:text-[2.7rem] max-[635px]:text-[2.4rem] max-[522px]:text-[2.1rem] max-[384px]:text-[1.8rem] max-[343px]:text-[1.6rem] leading-[2.8rem] min-[1000px]:max-[1100px]:leading-[2.7rem] max-[850px]:leading-[2.6rem] max-[785px]:leading-[3.3rem] max-[635px]:leading-[2.9rem] max-[522px]:leading-[2.6rem] max-[384px]:leading-[2.25rem] max-[343px]:leading-[2rem] duration-300 ease-linear font-bold dark:font-semibold">The Casual Vacancy</h1>
+                            <p className="text-[1.3rem] min-[1000px]:max-[1100px]:text-[1.2rem] max-[850px]:text-[1.2rem] max-[785px]:text-[1.4rem] max-[635px]:text-[1.25rem] max-[522px]:text-[1.1rem] max-[384px]:text-[1rem] max-[343px]:text-[0.962rem] duration-300 ease-linear font-semibold dark:font-medium mt-0.5 max-[850px]:mt-1 max-[785px]:mt-1.5 max-[343px]:mt-1">J. K. Rwoling</p>
                         </div>
 
                         <Ratings
@@ -47,7 +47,7 @@ export const BookOpened = () => {
 
                         <div className="flex items-center gap-1.5 ml-1">
                             <GiBlackBook className="text-2xl min-[1000px]:max-[1100px]:text-[1.4rem] max-[522px]:text-[1.25rem] max-[384px]:text-[1.1rem]" />
-                            <p className="font-medium min-[1000px]:max-[1100px]:text-[0.95rem] max-[522px]:text-[0.92rem] max-[384px]:text-[0.88rem]">On: <code>04-07-2024</code></p>
+                            <p className="font-medium dark:font-normal min-[1000px]:max-[1100px]:text-[0.95rem] max-[522px]:text-[0.92rem] max-[384px]:text-[0.88rem]">On: Wednesday, 4 July 2024</p>
                         </div>
                     </div>
                     <Button btnText={"Exchange"} addStyles={"py-2.5 w-72 max-[464px]:w-full text-[1.05rem] max-[522px]:text-[1rem] max-[384px]:text-[0.96rem] max-[343px]:text-[0.925rem]"} />
@@ -57,7 +57,7 @@ export const BookOpened = () => {
             <div className="bottom mt-12">
                 <div id="description" className="mb-8">
                     <h2 className="text-[1.875rem] max-[522px]:text-[1.64rem] max-[384px]:text-[1.47rem] max-[343px]:text-[1.375rem] font-semibold dark:font-medium mb-1">Description</h2>
-                    <p className="font-medium dark:font-normal max-[522px]:text-[0.96rem] max-[384px]:text-[0.93rem]">"The Tales of Beedle the Bard" is a collection of five wizarding fairy tales written by J.K. Rowling. Each story imparts moral lessons with a magical twist, beloved in the wizarding world of Harry Potter. The book includes "The Tale of the Three Brothers," which plays a significant role in the series' final installment. With illustrations and annotations by Albus Dumbledore, the book offers insights into the magical lore and traditions of the wizarding world. Rowling's enchanting storytelling brings these tales to life, making them timeless and captivating. The moral lessons embedded within the stories are both profound and thought-provoking. This collection is a charming and whimsical addition to the Harry Potter universe, appealing to fans of all ages. It is a must-have for anyone who loves the magic and wonder of Rowling's world.</p>
+                    <p className="font-medium dark:font-normal max-[522px]:text-[0.96rem] max-[384px]:text-[0.93rem]">{`${"The Tales of Beedle the Bard"} is a gem for both young readers and adults. The stories are enchanting and beautifully written. Rowling's imagination knows no bounds, as evidenced by these magical tales. The illustrations are a lovely touch. It's a delightful read that complements the Harry Potter series perfectly.`}</p>
                 </div>
 
                 <BookReviews />

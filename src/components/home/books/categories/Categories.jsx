@@ -53,6 +53,16 @@ let categories = [
         categoryName: "Classics",
         categoryColor: "#aa71c1"
     },
+    {
+        id: 11,
+        categoryName: "Romance",
+        categoryColor: "#aa71c1"
+    },
+    {
+        id: 12,
+        categoryName: "Funny",
+        categoryColor: "#aa71c1"
+    },
 ];
 
 
