@@ -7,7 +7,7 @@
 
 /* FlyoutMenu */
 .flyout-menu-item {
-    @apply flex items-center gap-3 px-[1.1rem] hover:bg-slate-200/55 dark:hover:bg-slate-800/55 duration-200 ease-linear
+    @apply flex items-center gap-3 px-[1.1rem] hover:bg-slate-200/55 dark:hover:bg-slate-800/55 relative before:absolute before:top-0 before:left-0 before:bg-slate-800/95 dark:before:bg-slate-200 before:w-1 before:min-h-full before:opacity-0 hover:before:opacity-[100%] duration-200 ease-linear
 }
 
 
