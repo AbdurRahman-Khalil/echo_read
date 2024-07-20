@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { ThemeBtn } from './ThemeBtn';
 
@@ -45,6 +45,7 @@ export const FlyoutMenu = ({ setOpenProfile, onOpenProfileClick, onListBookClick
         visible: { opacity: 1, scale: 1 },
         exit: { opacity: 0, scale: 0.95 },
     };
+    
 
     return (
         <div className="relative inline-block text-left -mb-1" ref={menuRef}>
@@ -58,12 +59,10 @@ export const FlyoutMenu = ({ setOpenProfile, onOpenProfileClick, onListBookClick
                 </button>
             </div>
 
-            <AnimatePresence>
                 {isOpen && (
                     <motion.div
                         initial="hidden"
                         animate="visible"
-                        exit="exit"
                         variants={menuVariants}
                         transition={{ duration: 0.2 }}
                         className="origin-top-right absolute right-0 w-56 rounded-lg shadow-lg bg-slate-50 dark:bg-slate-950 ring-1 ring-slate-900/20 dark:ring-slate-50/20 text-slate-800 dark:text-slate-100 font-medium dark:font-normal overflow-hidden"
@@ -139,7 +138,6 @@ export const FlyoutMenu = ({ setOpenProfile, onOpenProfileClick, onListBookClick
                         </div>
                     </motion.div>
                 )}
-            </AnimatePresence>
         </div>
     );
 };

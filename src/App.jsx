@@ -26,7 +26,7 @@ const App = () => {
         >
           <h1 className="text-[2.35rem] text-slate-800 dark:text-slate-100 font-bold font-playwriteNGModern -mt-[0.1rem] cursor-pointer">EchoRead</h1>
           <div className="flex gap-6 max-[780px]:gap-[1.1rem] items-center">
-            <SearchBar />
+            <SearchBar hideSeek={"max-[780px]:hidden w-[22rem]"} />
             <ThemeBtn
               addStyles={"text-lg -ml-2.5 border border-slate-900/30 dark:border-slate-50/30 rounded-full"}
               hideSeek={"max-[390px]:hidden"}

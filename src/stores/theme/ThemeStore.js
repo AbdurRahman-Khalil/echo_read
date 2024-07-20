@@ -8,11 +8,15 @@ const themeStore = (set) => ({
     theme: "light",
 
     darkTheme: () => {
-        set({ theme: "dark" })
+        set(() => (
+            { theme: "dark" }
+        ));
     },
 
     lightTheme: () => {
-        set({ theme: "light" })
+        set(() => (
+            { theme: "light" }
+        ));
     },
 
 });

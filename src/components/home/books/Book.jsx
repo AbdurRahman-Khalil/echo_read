@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { Button } from "../../custom_components/Button";
 import { Ratings } from "../../custom_components/Ratings";
 import { User } from "../../custom_components/User";
@@ -5,8 +7,17 @@ import { User } from "../../custom_components/User";
 
 export const Book = ({ key, bookImg, bookName, author, ratings, userImg, userName }) => {
     return (
-        <div
+        <motion.div
             key={key}
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            // transition={{
+            //     duration: 0.1,
+            //     type: 'spring',
+            //     stiffness: 250,
+            //     damping: 25,
+            // }}
             className="flex max-[1255px]:gap-1 max-[1090px]:gap-0.5 max-[561px]:gap-0 max-w-full min-h-44 -space-x-8 border rounded-lg border-slate-900/[13%] dark:border-slate-50/20 text-slate-800 dark:text-slate-100 shadow-lg transition-all duration-500"
         >
             <div className="book-img max-w-[50%] max-[1150px]:max-w-[53%] max-[1090px]:max-w-[57%] max-[1024px]:max-w-[53%] max-[857px]:max-w-[54.5%] max-[815px]:max-w-[56%] max-[800px]:max-w-[57%] max-[561px]:max-w-[60%] max-[456px]:max-w-[57%] max-[390px]:max-w-[55%] min-h-44 duration-300 min-[1425px]:max-w-[55%]">
@@ -39,7 +50,7 @@ export const Book = ({ key, bookImg, bookName, author, ratings, userImg, userNam
 
                 <Button addStyles={"py-2 mt-2"} btnText={"Exchange"} />
             </div>
-        </div>
+        </motion.div>
     );
 };
 
