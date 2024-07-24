@@ -1,3 +1,5 @@
+import { motion, AnimatePresence } from "framer-motion";
+
 import useBookStore from "../../../stores/books/BookStore";
 
 import { User } from "../../custom_components/User";
@@ -39,8 +41,13 @@ export const Profile = ({ setOpenProfile, setListBookState }) => {
                     />
                     Profile
                 </h2>
-
-                <div className="profile-content max-w-[22rem] max-[555px]:max-w-full border border-slate-900/20 dark:border-slate-50/20 rounded-xl px-4 py-5 mt-1.5 mb-4 relative">
+                <AnimatePresence>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}  
+                    className="profile-content max-w-[22rem] max-[555px]:max-w-full border border-slate-900/20 dark:border-slate-50/20 rounded-xl px-4 py-5 mt-1.5 mb-4 relative"
+                >
                     <FiEdit className="absolute top-3 right-3 text-xl text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 duration-200 ease-linear cursor-pointer" />
                     <User
                         styles={"flex flex-col items-center gap-3"}
@@ -98,7 +105,8 @@ export const Profile = ({ setOpenProfile, setListBookState }) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
+                </AnimatePresence>
             </div>
 
             <div id="my-books">
@@ -106,7 +114,8 @@ export const Profile = ({ setOpenProfile, setListBookState }) => {
                     My Books
                     <HiOutlineSquaresPlus className="min-[556px]:max-[650px]:mt-2 text-[2.1rem] text-sky-400/80 dark:text-sky-400 hover:text-sky-300/75 dark:hover:text-sky-300 duration-200 ease-linear cursor-pointer" onClick={() => setListBookState(true)} />
                 </h2>
-                <div className="books mt-1.5 mb-4 grid grid-cols-5 max-[1150px]:grid-cols-4 max-[960px]:grid-cols-3 max-[825px]:grid-cols-2 max-[660px]:grid-cols-1 max-[555px]:grid-cols-3 max-[465px]:grid-cols-2 gap-4 max-[555px]:gap-3 max-[465px]:gap-3.5 min-[1425px]:grid-cols-6 min-[1600px]:grid-cols-7">
+                <div className="books mt-1.5 mb-4 grid grid-cols-5 max-[1150px]:grid-cols-4 max-[960px]:grid-cols-3 max-[825px]:grid-cols-2 max-[706px]:grid-cols-1 max-[555px]:grid-cols-3 max-[465px]:grid-cols-2 gap-4 max-[555px]:gap-3 max-[465px]:gap-3.5 min-[1425px]:grid-cols-6 min-[1600px]:grid-cols-7">
+                <AnimatePresence>
                     {
                         myBooks.length < 1
                             ?
@@ -114,15 +123,11 @@ export const Profile = ({ setOpenProfile, setListBookState }) => {
                             :
                             myBooks.map(myBook => (
                                 <MyBook
-                                    id={myBook.id}
-                                    key={myBook.id}
-                                    bookImg={myBook.bookImg}
-                                    bookName={myBook.bookName}
-                                    author={myBook.author}
-                                    ratings={myBook.ratings}
+                                    book={myBook}
                                 />
                             ))
                     }
+                </AnimatePresence>
                 </div>
             </div>
         </div>

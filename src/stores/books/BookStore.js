@@ -23,6 +23,29 @@ const bookStore = (set) => ({
             myBooks: state.myBooks.filter((b) => b.id !== bookId)
         }));
     },
+    addRating: (bookId, rating) => {
+        set((state) => ({
+            books: state.books.map((b) =>
+                b.id === bookId
+                    ? {
+                        ...b,
+                        usersRatings: [rating, ...(b.usersRatings || [])],
+                        bookRating: [rating, ...(b.usersRatings || [])].reduce((a, c) => a + c, 0) / ((b.usersRatings || []).length + 1)
+                    }
+                    : b
+            ),
+
+            myBooks: state.myBooks.map((b) =>
+                b.id === bookId
+                    ? {
+                        ...b,
+                        usersRatings: [rating, ...(b.usersRatings || [])],
+                        bookRating: [rating, ...(b.usersRatings || [])].reduce((a, c) => a + c, 0) / ((b.usersRatings || []).length + 1)
+                    }
+                    : b
+            ),
+        }));
+    },
 });
 
 

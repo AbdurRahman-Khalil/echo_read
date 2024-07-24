@@ -69,7 +69,7 @@ export const FlyoutMenu = ({ setOpenProfile, onOpenProfileClick, onListBookClick
                     >
                         <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu" className='relative'>
                             <ThemeBtn
-                                addStyles={"text-[1.35rem] dark:text-[1.4rem] absolute top-0 right-0 pt-4 rounded-se-lg"}
+                                addStyles={"text-[1.35rem] dark:text-[1.4rem] absolute top-0 right-0 z-20 pt-4 pb-3.5 rounded-se-lg"}
                                 hideSeek={"hidden max-[390px]:block"}
                             />
                             <a
