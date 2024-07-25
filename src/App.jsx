@@ -1,12 +1,9 @@
 import { useState } from "react";
 
-import { Routes, Route } from "react-router-dom";
-
 import { Navbar } from "./components/custom_components/Navbar";
 import { Home } from "./components/home/Home";
 import { Chats } from "./components/home/chats/Chats";
 import { Books } from "./components/home/books/Books";
-import { BookOpened } from "./components/home/books/BookOpened";
 import { ListBook } from "./components/home/books/ListBook";
 import { FlyoutMenu } from "./components/home/FlyoutMenu";
 import { Profile } from "./components/home/profile/Profile";
@@ -47,33 +44,14 @@ const App = () => {
 
 
         {/* if user is logged in */}
-        {/* <Home>
-        {!openProfile ? 
-          <>
-            <Books />
-            <Chats />
-          </> :
-          <Profile setOpenProfile={setOpenProfile} setListBookState={setListBookState} /> 
-        }
-          
-        </Home> */}
-
-
         <Home>
           {!openProfile ?
             <>
-              {/* <Books /> */}
-
-              <Routes>
-                <Route path="/" element={<Books />} />
-                <Route path="/books/:bid" element={<BookOpened />} />
-              </Routes>
-
-              {/* <Chats /> */}
+              <Books />
+              <Chats />
             </> :
             <Profile setOpenProfile={setOpenProfile} setListBookState={setListBookState} />
           }
-
         </Home>
           
           

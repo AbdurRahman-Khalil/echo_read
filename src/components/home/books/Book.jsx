@@ -35,7 +35,7 @@ export const Book = ({ bookId, bookImg, bookName, bookRating, author, userImg, u
 
                 {
                     bookRating === 0 ?
-                        <Ratings bookId={bookId} addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)]"} /> :
+                        <Ratings bookId={bookId} addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]"} /> :
                         <p className="flex items-center gap-[0.2rem] my-2 mb-2.5">
                             {[...Array(5)].map((star, index) => {
                                 const rating = bookRating.toFixed(1);

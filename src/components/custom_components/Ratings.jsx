@@ -36,8 +36,8 @@ export const Ratings = ({ bookId, styles, addStarStyles }) => {
                         >
                             {
                                 currentRating <= rating
-                                    ? <FaStar className={`${addStarStyles} text-[1.035rem] cursor-pointer`} />
-                                    : <FaRegStar className={`${addStarStyles} text-[1.035rem] cursor-pointer`} />
+                                    ? <FaStar className={`${addStarStyles} cursor-pointer`} />
+                                    : <FaRegStar className={`${addStarStyles} cursor-pointer`} />
                             }
                         </span>
                     </label>

@@ -78,7 +78,7 @@ export const MyBook = ({ bookId, bookImg, bookName, author, bookRating }) => {
 
                     {
                         bookRating === 0 ?
-                            <Ratings bookId={bookId} addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)]"} /> :
+                            <Ratings bookId={bookId} addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.05rem]"} /> :
                             <p className="flex items-center gap-[0.2rem] my-2 mb-2.5">
                                 {[...Array(5)].map((star, index) => {
                                     const rating = bookRating.toFixed(1);
@@ -88,11 +88,11 @@ export const MyBook = ({ bookId, bookImg, bookName, author, bookRating }) => {
                                     return (
                                         <span key={index}>
                                             {index < fullStars ? (
-                                                <FaStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
+                                                <FaStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.05rem]" />
                                             ) : index === fullStars && hasHalfStar ? (
-                                                <FaStarHalfAlt className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
+                                                <FaStarHalfAlt className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.05rem]" />
                                             ) : (
-                                                <FaRegStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
+                                                <FaRegStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.05rem]" />
                                             )}
                                         </span>
                                     );
