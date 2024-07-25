@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 import { User } from "./User";
 
 
-export const Review = ({ key, userImg, userName, theReview, date }) => {
+export const Review = ({ userImg, userName, theReview, date }) => {
     return (
-        <motion.li 
-            key={key} 
+        <motion.li  
             className="review space-y-3 max-[600px]:space-y-4 mt-4 p-3.5 bg-slate-100/50 dark:bg-slate-900/40 rounded-lg border border-slate-900/15 dark:border-slate-50/15"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}

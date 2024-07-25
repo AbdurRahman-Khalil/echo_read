@@ -7,9 +7,6 @@ import { Ratings } from "../../custom_components/Ratings";
 import { User } from "../../custom_components/User";
 import { BookReviews } from "./BookReviews";
 
-// import b6 from "../../../assets/books/book3.jpg";
-// import u1 from "../../../assets/megan_hanson.jpg";
-
 import { IoArrowBackOutline } from "react-icons/io5";
 import { GiBlackBook } from "react-icons/gi";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
@@ -20,10 +17,8 @@ export const BookOpened = () => {
     const { books } = useBookStore((state) => ({
         books: state.books,
     }));
-    
-    const { bid } = useParams();
 
-    console.log(bid);
+    const { bid } = useParams();
 
     const book = books.find((b) => b.id === bid);
 
@@ -49,31 +44,28 @@ export const BookOpened = () => {
                         </div>
 
                         {
-                    book.bookRating === 0 ?
-                        <Ratings bookId={book.id} addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)]"} /> :
-                        <p className="flex items-center gap-[0.2rem] my-2 mb-2.5">
-                            {[...Array(5)].map((star, index) => {
-                                const rating = book.bookRating.toFixed(1);
-                                const fullStars = Math.floor(rating);
-                                const hasHalfStar = rating - fullStars >= 0.2 && rating - fullStars <= 0.6;
-                                
-                                return (
-                                    <span key={index}>
-                                        {index < fullStars ? (
-                                            <FaStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
-                                        ) : index === fullStars && hasHalfStar ? (
-                                            <FaStarHalfAlt className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
-                                        ) : (
-                                            <FaRegStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
-                                        )}
-                                    </span>
-                                );
-                            })}
-                            {/* <p>{book.bookRating}</p> */}
-                            {/* <p>{book.usersRatings} Users</p> */}
-                        </p>
-                }
-                        
+                            book.bookRating === 0 ?
+                                <Ratings bookId={book.id} addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)]"} /> :
+                                <p className="flex items-center gap-[0.2rem] my-2 mb-2.5">
+                                    {[...Array(5)].map((star, index) => {
+                                        const rating = book.bookRating.toFixed(1);
+                                        const fullStars = Math.floor(rating);
+                                        const hasHalfStar = rating - fullStars >= 0.2 && rating - fullStars <= 0.6;
+
+                                        return (
+                                            <span key={index}>
+                                                {index < fullStars ? (
+                                                    <FaStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
+                                                ) : index === fullStars && hasHalfStar ? (
+                                                    <FaStarHalfAlt className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
+                                                ) : (
+                                                    <FaRegStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
+                                                )}
+                                            </span>
+                                        );
+                                    })}
+                                </p>
+                        }
                     </div>
                 </div>
 
@@ -102,7 +94,7 @@ export const BookOpened = () => {
                     <p className="font-medium dark:font-normal max-[522px]:text-[0.96rem] max-[384px]:text-[0.93rem]">{book.description}</p>
                 </div>
 
-                <BookReviews />
+                <BookReviews book={book} />
             </div>
         </div>
     );
@@ -175,7 +167,7 @@ export const BookOpened = () => {
 // import u1 from "../../../assets/megan_hanson.jpg";
 
 // import { IoArrowBackOutline } from "react-icons/io5";
-// import { GiBlackBook } from "react-icons/gi";   
+// import { GiBlackBook } from "react-icons/gi";
 
 
 

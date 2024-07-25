@@ -45,7 +45,14 @@ export const Books = () => {
                     })
                     .map(book => (
                         <Book
-                            book={book}
+                            key={book.id}
+                            bookId={book.id}
+                            bookName={book.bookName}
+                            bookImg={book.bookImg}
+                            author={book.author}
+                            userImg={book.userImg}
+                            userName={book.userName}
+                            bookRating={book.bookRating}
                         />
                     ))
                 }

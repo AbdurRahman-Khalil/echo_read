@@ -46,6 +46,27 @@ const bookStore = (set) => ({
             ),
         }));
     },
+
+    addReview: (bookId, review) => {
+        set((state) => ({
+            books: state.books.map((b) =>
+                b.id === bookId
+                    ? {
+                        ...b,
+                        reviews: [review, ...(b.reviews || [])]
+                    }
+                    : b
+            ),
+            myBooks: state.myBooks.map((b) =>
+                b.id === bookId
+                    ? {
+                        ...b,
+                        reviews: [review, ...(b.reviews || [])]
+                    }
+                    : b
+            ),
+        }));
+    },
 });
 
 

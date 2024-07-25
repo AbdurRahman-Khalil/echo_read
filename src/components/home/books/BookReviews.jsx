@@ -1,16 +1,15 @@
-import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { v4 as uuidv4 } from 'uuid';
 import { AnimatePresence } from 'framer-motion';
+
+import useBookStore from '../../../stores/books/BookStore';
 
 import { Button } from "../../custom_components/Button";
 import { Review } from "../../custom_components/Review";
 
 import u1 from "../../../assets/megan_hanson.jpg";
-import u2 from "../../../assets/willard_arnold.jpg";
-import u3 from "../../../assets/leta_carpenter.jpg";
-import u4 from "../../../assets/owen_frazier.jpg";
-import u5 from "../../../assets/vickie_mckinney.jpg";
+
 
 
 
@@ -26,54 +25,16 @@ const reviewSchema = Yup.object().shape({
 });
 
 
-const allReviews = [
-    {
-        id: 1,
-        userImg: u1,
-        userName: "Megan Hanson",
-        theReview: `${"The Tales of Beedle the Bard"} is a delightful addition to the Harry Potter series. The fairy tales are charming, each carrying a unique moral lesson. Rowling's storytelling shines through, making it a must-read for fans. The illustrations and Dumbledore's notes add a rich, immersive layer. Perfect for readers of all ages.`,
-        reviewDate: "Tuesday, 18 July 2024",
-    },
-    {
-        id: 2,
-        userImg: u2,
-        userName: "Willard Arnold",
-        theReview: `This book is a magical treat for Harry Potter enthusiasts. The tales are whimsical and filled with enchanting details. I loved how each story conveyed meaningful messages. Dumbledore's commentary provided fascinating insights. It's a wonderful companion to the original series.`,
-        reviewDate: "Sunday, 15 March 2024",
-    },
-    {
-        id: 3,
-        userImg: u3,
-        userName: "Leta Carpenter",
-        theReview: `${"The Tales of Beedle the Bard"} captivated me from the first page. The stories are simple yet profound, reminiscent of classic fairy tales. Rowling's creativity is evident in every tale. The added notes from Dumbledore offer a deeper understanding. A must-have for any Potterhead's collection.`,
-        reviewDate: "Saturday, 8 August 2023",
-    },
-    {
-        id: 4,
-        userImg: u4,
-        userName: "Owen Frazier",
-        theReview: `A charming collection of wizarding fairy tales, this book exceeded my expectations. Each story is well-crafted and engaging. The moral lessons are cleverly woven into the narrative. I particularly enjoyed the annotations by Albus Dumbledore. It's a fantastic addition to the Harry Potter world.`,
-        reviewDate: "Thursday, 10 April 2024",
-    },
-    {
-        id: 5,
-        userImg: u5,
-        userName: "Vickie Mckinney",
-        theReview: `${"The Tales of Beedle the Bard"} is a gem for both young readers and adults. The stories are enchanting and beautifully written. Rowling's imagination knows no bounds, as evidenced by these magical tales. The illustrations are a lovely touch. It's a delightful read that complements the Harry Potter series perfectly.`,
-        reviewDate: "Monday, 12 June 2024",
-    },
-];
 
-allReviews.reverse();
+export const BookReviews = ({ book }) => {
+    const { addReview } = useBookStore(state => ({
+        addReview: state.addReview
+    }));
 
+    const reviews = book.reviews || [];
 
-export const BookReviews = () => {
-    const [reviews, setReviews] = useState(allReviews);
 
     const onSubmit = (values, { resetForm }) => {
-        
-        // console.log("Following Data has been submitted successfully ", values);
-
         let days = [
             "Sunday",
             "Monday",
@@ -106,13 +67,13 @@ export const BookReviews = () => {
         const year = currentDate.getFullYear();
 
         const newReview = {
-            id: reviews.length + 1,
+            id: uuidv4(),
             userImg: u1,
             userName: "Magan Hanson",
             theReview: values.review,
             reviewDate: `${day}, ${date} ${month} ${year}`
         };
-        setReviews([newReview, ...reviews]);
+        addReview(book.id, newReview);
 
         resetForm();
     };
@@ -170,20 +131,20 @@ export const BookReviews = () => {
 
             <ul className="list-none">
                 <p className="font-semibold dark:font-medium tracking-wide">Total Reviews: {reviews.length}</p>
-            <AnimatePresence>
-            {
-                reviews.map(review => (
-                    <Review
-                        key={review.id}
-                        userImg={review.userImg}
-                        userName={review.userName}
-                        theReview={review.theReview}
-                        date={review.reviewDate}
-                    />
-                ))
-            }
-            </AnimatePresence>
-            </ul>            
+                <AnimatePresence>
+                    {
+                        reviews.map(review => (
+                            <Review
+                                key={review.id}
+                                userImg={review.userImg}
+                                userName={review.userName}
+                                theReview={review.theReview}
+                                date={review.reviewDate}
+                            />
+                        ))
+                    }
+                </AnimatePresence>
+            </ul>
         </div>
     )
 }

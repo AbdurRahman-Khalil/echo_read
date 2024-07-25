@@ -1,9 +1,8 @@
 import { useState } from "react";
 
-import { FaStar, FaRegStar } from "react-icons/fa";
-
-
 import useBookStore from "../../stores/books/BookStore";
+
+import { FaStar, FaRegStar } from "react-icons/fa";
 
 
 
