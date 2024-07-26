@@ -4,12 +4,12 @@ import useBookStore from "../../../stores/books/BookStore";
 
 import { Button } from "../../custom_components/Button";
 import { Ratings } from "../../custom_components/Ratings";
+import { BookRating } from "./BookRating";
 import { User } from "../../custom_components/User";
 import { BookReviews } from "./BookReviews";
 
 import { IoArrowBackOutline } from "react-icons/io5";
 import { GiBlackBook } from "react-icons/gi";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 
 
@@ -46,26 +46,14 @@ export const BookPage = () => {
 
                         {
                             book.bookRating === 0 ?
-                                <Ratings bookId={book.id} addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.41rem] max-[850px]:text-[1.35rem] max-[785px]:text-[1.62rem] max-[640px]:text-[1.41rem] max-[522px]:text-[1.35rem] max-[384px]:text-[1.15rem] max-[343px]:text-[1.05rem] duration-200 ease-linear"} /> :
-                                <p className="flex items-center gap-[0.2rem] my-2 mb-2.5">
-                                    {[...Array(5)].map((star, index) => {
-                                        const rating = book.bookRating.toFixed(1);
-                                        const fullStars = Math.floor(rating);
-                                        const hasHalfStar = rating - fullStars >= 0.2 && rating - fullStars <= 0.6;
-
-                                        return (
-                                            <span key={index}>
-                                                {index < fullStars ? (
-                                                    <FaStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.41rem] max-[850px]:text-[1.35rem] max-[785px]:text-[1.62rem] max-[640px]:text-[1.41rem] max-[522px]:text-[1.35rem] max-[384px]:text-[1.15rem] max-[343px]:text-[1.05rem] duration-200 ease-linear" />
-                                                ) : index === fullStars && hasHalfStar ? (
-                                                    <FaStarHalfAlt className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.41rem] max-[850px]:text-[1.35rem] max-[785px]:text-[1.62rem] max-[640px]:text-[1.41rem] max-[522px]:text-[1.35rem] max-[384px]:text-[1.15rem] max-[343px]:text-[1.05rem] duration-200 ease-linear" />
-                                                ) : (
-                                                    <FaRegStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.41rem] max-[850px]:text-[1.35rem] max-[785px]:text-[1.62rem] max-[640px]:text-[1.41rem] max-[522px]:text-[1.35rem] max-[384px]:text-[1.15rem] max-[343px]:text-[1.05rem] duration-200 ease-linear" />
-                                                )}
-                                            </span>
-                                        );
-                                    })}
-                                </p>
+                                <Ratings 
+                                    bookId={book.id} 
+                                    addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.41rem] max-[850px]:text-[1.35rem] max-[785px]:text-[1.62rem] max-[640px]:text-[1.41rem] max-[522px]:text-[1.35rem] max-[384px]:text-[1.15rem] max-[343px]:text-[1.05rem] duration-200 ease-linear"}
+                                /> :
+                                <BookRating 
+                                    bookRatings={book.bookRating} 
+                                    addStarStyles={"text-[1.41rem] max-[850px]:text-[1.35rem] max-[785px]:text-[1.62rem] max-[640px]:text-[1.41rem] max-[522px]:text-[1.35rem] max-[384px]:text-[1.15rem] max-[343px]:text-[1.05rem]"}
+                                />      
                         }
                     </div>
                 </div>

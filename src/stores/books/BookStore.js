@@ -2,14 +2,14 @@ import { create } from "zustand";
 
 import { devtools, persist } from "zustand/middleware";
 
-import { booksData } from "./data"; 
-import { myBooksData } from "./MyData"; 
+// import { booksData } from "./data"; 
+// import { myBooksData } from "./MyData"; 
 
 
 const bookStore = (set) => ({
 
-    books: booksData,
-    myBooks: myBooksData,
+    books: [],
+    myBooks: [],
 
     addBook: (book) => {
         set((state) => ({

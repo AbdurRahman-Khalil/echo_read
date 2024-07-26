@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 import useBookStore from "../../../stores/books/BookStore";
 
 import { Ratings } from "../../custom_components/Ratings";
+import { BookRating } from "../books/BookRating";
 
 import { CgTrash } from "react-icons/cg";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-
 
 
 
@@ -79,25 +78,7 @@ export const MyBook = ({ bookId, bookImg, bookName, author, bookRating }) => {
                     {
                         bookRating === 0 ?
                             <Ratings bookId={bookId} addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.05rem]"} /> :
-                            <p className="flex items-center gap-[0.2rem] my-2 mb-2.5">
-                                {[...Array(5)].map((star, index) => {
-                                    const rating = bookRating.toFixed(1);
-                                    const fullStars = Math.floor(rating);
-                                    const hasHalfStar = rating - fullStars >= 0.2 && rating - fullStars <= 0.6;
-
-                                    return (
-                                        <span key={index}>
-                                            {index < fullStars ? (
-                                                <FaStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.05rem]" />
-                                            ) : index === fullStars && hasHalfStar ? (
-                                                <FaStarHalfAlt className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.05rem]" />
-                                            ) : (
-                                                <FaRegStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.05rem]" />
-                                            )}
-                                        </span>
-                                    );
-                                })}
-                            </p>
+                            <BookRating bookRatings={bookRating} addStarStyles={"text-[1.05rem]"} />
                     }
 
 

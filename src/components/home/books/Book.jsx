@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 
 import { Button } from "../../custom_components/Button";
 import { Ratings } from "../../custom_components/Ratings";
+import { BookRating } from "./BookRating";
 import { User } from "../../custom_components/User";
-
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 
 
@@ -36,25 +35,7 @@ export const Book = ({ bookId, bookImg, bookName, bookRating, author, userImg, u
                 {
                     bookRating === 0 ?
                         <Ratings bookId={bookId} addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]"} /> :
-                        <p className="flex items-center gap-[0.2rem] my-2 mb-2.5">
-                            {[...Array(5)].map((star, index) => {
-                                const rating = bookRating.toFixed(1);
-                                const fullStars = Math.floor(rating);
-                                const hasHalfStar = rating - fullStars >= 0.2 && rating - fullStars <= 0.6;
-
-                                return (
-                                    <span key={index}>
-                                        {index < fullStars ? (
-                                            <FaStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
-                                        ) : index === fullStars && hasHalfStar ? (
-                                            <FaStarHalfAlt className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
-                                        ) : (
-                                            <FaRegStar className="text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.035rem]" />
-                                        )}
-                                    </span>
-                                );
-                            })}
-                        </p>
+                        <BookRating bookRatings={bookRating} addStarStyles={"text-[1.035rem]"} />
                 }
 
                 <User
