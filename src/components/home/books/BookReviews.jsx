@@ -89,7 +89,7 @@ export const BookReviews = ({ book }) => {
                 validationSchema={reviewSchema}
             >
                 {(formik) => (
-                    <Form className="mt-3.5 mb-8">
+                    <Form className="mt-3.5 mb-8 max-[331px]:mb-12">
                         {/* <p className="text-[1.6rem] font-semibold dark:font-medium mb-2 ml-[0.18rem]">Your Review</p> */}
                         <div className="review">
                             <Field
@@ -108,10 +108,11 @@ export const BookReviews = ({ book }) => {
                             />
                         </div>
 
-                        <div className="space-x-10 text-end">
+                        <div className="space-x-10 max-[331px]:space-x-0 text-end max-[331px]:flex max-[331px]:flex-col-reverse max-[331px]:gap-3">
                             <button
                                 type="reset"
-                                className="text-slate-900/75 dark:text-slate-100/75 hover:text-slate-900 dark:hover:text-slate-100 active:text-slate-200 dark:active:text-slate-800 duration-200 ease-linear font-bold dark:font-medium mt-4"
+                                className="text-slate-900/75 dark:text-slate-100/75 hover:text-slate-900 dark:hover:text-slate-100 active:text-slate-200 dark:active:text-slate-800 
+                                duration-200 ease-linear font-bold dark:font-medium mt-4"
                                 onClick={formik.handleReset}
                             >
                                 Clear Review
