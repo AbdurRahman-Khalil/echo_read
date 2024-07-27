@@ -28,7 +28,7 @@ const reviewSchema = Yup.object().shape({
 
 export const BookReviews = ({ book }) => {
     const { addReview } = useBookStore(state => ({
-        addReview: state.addReview
+        addReview: state.addReview,
     }));
 
     const reviews = book.reviews || [];

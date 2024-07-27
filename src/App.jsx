@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import { Navbar } from "./components/custom_components/Navbar";
-import { Home } from "./components/home/Home";
-import { Chats } from "./components/home/chats/Chats";
-import { Books } from "./components/home/books/Books";
-import { ListBook } from "./components/home/books/ListBook";
-import { FlyoutMenu } from "./components/home/FlyoutMenu";
-import { Profile } from "./components/home/profile/Profile";
-import { SearchBar } from "./components/home/SearchBar";
-import { ThemeBtn } from "./components/home/ThemeBtn";
+import { Appt } from "./components/app/Appt";
+import { Chats } from "./components/app/chats/Chats";
+import { Books } from "./components/app/books/Books";
+import { ListBook } from "./components/app/books/ListBook";
+import { FlyoutMenu } from "./components/app/FlyoutMenu";
+import { Profile } from "./components/app/profile/Profile";
+import { SearchBar } from "./components/app/SearchBar";
+import { ThemeBtn } from "./components/app/ThemeBtn";
 
 
 
@@ -44,7 +44,7 @@ const App = () => {
 
 
         {/* if user is logged in */}
-        <Home>
+        <Appt>
           {!openProfile ?
             <>
               <Books />
@@ -52,7 +52,7 @@ const App = () => {
             </> :
             <Profile setOpenProfile={setOpenProfile} setListBookState={setListBookState} />
           }
-        </Home>
+        </Appt>
           
           
         

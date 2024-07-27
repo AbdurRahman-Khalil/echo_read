@@ -8,9 +8,11 @@ import { FaStar, FaRegStar } from "react-icons/fa";
 
 export const Ratings = ({ bookId, styles, addStarStyles }) => {
     
-    const [rating, setRating] = useState(null);
+    const { addRating } = useBookStore((state) => ({
+        addRating: state.addRating,
+    }));
 
-    const addRating = useBookStore((state) => state.addRating);
+    const [rating, setRating] = useState(null);
 
     const handleRating = (newRating) => {
         setRating(newRating);
