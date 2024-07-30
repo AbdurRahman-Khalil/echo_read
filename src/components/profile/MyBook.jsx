@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
-import useBookStore from "../../../stores/books/BookStore";
+import useBookStore from "../../stores/books/BookStore";
 
-import { Ratings } from "../../custom_components/Ratings";
-import { BookRating } from "../books/BookRating";
+import { Ratings } from "../custom_components/Ratings";
+import { BookRating } from "../chats_books/books/BookRating";
 
 import { CgTrash } from "react-icons/cg";
 

@@ -24,7 +24,7 @@
 }
 
 
-@layer base {
+@layer base { 
     #categories::-webkit-scrollbar {
         display: none;
     }

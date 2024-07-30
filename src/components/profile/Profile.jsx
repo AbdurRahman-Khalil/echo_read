@@ -1,17 +1,19 @@
+import { useNavigate, Link } from "react-router-dom";
+
 import { motion, AnimatePresence } from "framer-motion";
 
-import useBookStore from "../../../stores/books/BookStore";
+import useBookStore from "../../stores/books/BookStore";
 
-import { User } from "../../custom_components/User";
+import { User } from "../custom_components/User";
 import { Info } from './Info';
 import { ContactInfo } from './ContactInfo';
 import { MyBook } from "./MyBook";
-import { Gmail } from "../../custom_components/logos/Gmail";
-import { Instagram } from "../../custom_components/logos/Instagram";
-import { TwitterX } from "../../custom_components/logos/TwitterX";
+import { Gmail } from "../custom_components/logos/Gmail";
+import { Instagram } from "../custom_components/logos/Instagram";
+import { TwitterX } from "../custom_components/logos/TwitterX";
 // import { books } from "./home/books/Books/books";
 
-import vickie_mckinney from "../../../assets/vickie_mckinney.jpg";
+import vickie_mckinney from "../../assets/vickie_mckinney.jpg";
 
 import { FiEdit } from "react-icons/fi";
 import { BsGenderFemale } from "react-icons/bs";
@@ -24,20 +26,22 @@ import { HiOutlineSquaresPlus } from "react-icons/hi2";
 
 
 
-export const Profile = ({ setOpenProfile, setListBookState }) => {
+export const Profile = () => {
     const { myBooks } = useBookStore((state) => ({
         myBooks: state.myBooks,
     }));
 
+    const goBack = useNavigate();
+
 
 
     return (
-        <div className="min-h-fit flex max-[555px]:flex-col gap-10 max-[555px]:gap-3 mx-3.5 pt-1 text-slate-800 dark:text-slate-100 font-semibold dark:font-medium">
+        <div className="min-h-fit flex max-[555px]:flex-col gap-10 max-[555px]:gap-3 mx-3.5 pt-[4.6rem] text-slate-800 dark:text-slate-100 font-semibold dark:font-medium">
             <div id="profile">
-                <h2 className="flex items-center gap-5 text-[2.25rem] max-[1000px]:text-[2.035rem] max-[825px]:text-[2.125rem] max-[690px]:text-[2.04rem] max-[555px]:text-[2.25rem] py-1">
+                <h2 className="flex items-center gap-5 text-[2.25rem] max-[1000px]:text-[2.035rem] max-[825px]:text-[2.125rem] max-[690px]:text-[2.04rem] max-[555px]:text-[2.25rem] pt-1 pb-2.5">
                     <IoArrowBackOutline
                         className="text-[1.8rem] -ml-0.5 hover:scale-x-[1.15] hover:-translate-x-1 duration-200 ease-linear cursor-pointer"
-                        onClick={() => setOpenProfile(false)}
+                        onClick={() => goBack("/app")}
                     />
                     Profile
                 </h2>
@@ -110,11 +114,13 @@ export const Profile = ({ setOpenProfile, setListBookState }) => {
             </div>
 
             <div id="my-books">
-                <h2 className="flex justify-between items-center min-[556px]:max-[650px]:flex-col min-[556px]:max-[650px]:items-start text-[2.25rem] max-[1000px]:text-[2.035rem] max-[825px]:text-[2.125rem] max-[690px]:text-[2.04rem] max-[555px]:text-[2.25rem] py-1">
+                <h2 className="flex justify-between items-center min-[556px]:max-[650px]:flex-col min-[556px]:max-[650px]:items-start text-[2.25rem] max-[1000px]:text-[2.035rem] max-[825px]:text-[2.125rem] max-[690px]:text-[2.04rem] max-[555px]:text-[2.25rem] pt-1 pb-2.5">
                     My Books
-                    <HiOutlineSquaresPlus className="min-[556px]:max-[650px]:mt-2 text-[2.1rem] text-sky-400/80 dark:text-sky-400 hover:text-sky-300/75 dark:hover:text-sky-300 duration-200 ease-linear cursor-pointer" onClick={() => setListBookState(true)} />
+                    <Link to={"/app/list_book"}>
+                        <HiOutlineSquaresPlus className="min-[556px]:max-[650px]:mt-2 text-[2.1rem] text-sky-400/80 dark:text-sky-400 hover:text-sky-300/75 dark:hover:text-sky-300 duration-200 ease-linear cursor-pointer" />
+                    </Link>
                 </h2>
-                <div className="books mt-1.5 mb-4 grid grid-cols-5 max-[1150px]:grid-cols-4 max-[960px]:grid-cols-3 max-[825px]:grid-cols-2 max-[706px]:grid-cols-1 max-[555px]:grid-cols-3 max-[465px]:grid-cols-2 gap-4 max-[555px]:gap-3 max-[465px]:gap-3.5 min-[1425px]:grid-cols-6 min-[1600px]:grid-cols-7">
+                <div className="books mt-1.5 mb-5 grid grid-cols-5 max-[1150px]:grid-cols-4 max-[960px]:grid-cols-3 max-[825px]:grid-cols-2 max-[706px]:grid-cols-1 max-[555px]:grid-cols-3 max-[465px]:grid-cols-2 gap-4 max-[555px]:gap-3 max-[465px]:gap-3.5 min-[1425px]:grid-cols-6 min-[1600px]:grid-cols-7">
                     <AnimatePresence>
                         {
                             myBooks.length < 1

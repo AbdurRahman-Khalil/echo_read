@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';
+
 import useBookStore from "../../../stores/books/BookStore";
 
 import { Button } from "../../custom_components/Button";
@@ -49,7 +51,7 @@ const bookSchema = Yup.object().shape({
 
 
 
-export const ListBook = ({ setListBookState }) => {
+export const ListBook = () => {
 
     const { addBook } = useBookStore((state) => ({
         addBook: state.addBook
@@ -57,9 +59,11 @@ export const ListBook = ({ setListBookState }) => {
 
     const handleClickOutside = (e) => {
         if (e.target.id === 'overlay') {
-            setListBookState(false);
+            goBack("/app");
         }
     };
+
+    const goBack = useNavigate();
 
 
     const onSubmit = (values, { resetForm }) => {
@@ -125,7 +129,7 @@ export const ListBook = ({ setListBookState }) => {
         };
 
         setTimeout(() => {
-            setListBookState(false);
+            goBack("/app");
         }, 1000);
     };
 
@@ -148,7 +152,7 @@ export const ListBook = ({ setListBookState }) => {
             >
                 <IoClose
                     className="text-[2rem] absolute top-[0.4rem] right-[0.45rem] cursor-pointer"
-                    onClick={() => setListBookState(false)}
+                    onClick={() => goBack(-1)}
                 />
 
                 <Formik

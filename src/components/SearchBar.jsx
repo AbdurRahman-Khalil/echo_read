@@ -1,4 +1,4 @@
-import useSearchStore from "../../stores/search/SearchStore";
+import useSearchStore from "../stores/search/SearchStore";
 
 import { FiSearch } from "react-icons/fi";
 

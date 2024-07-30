@@ -31,7 +31,10 @@ export const BookPage = () => {
 
     return (
         <div className="-mx-3.5 pb-5 pt-[0.02rem] max-[780px]:pt-6 px-[1.15rem] text-slate-800 dark:text-slate-100 ">
-            <IoArrowBackOutline className="text-[1.9rem] mt-0.5 mb-5 hover:scale-x-[1.15] hover:-translate-x-1 duration-200 ease-linear cursor-pointer" onClick={() => goback(-1)} />
+            <IoArrowBackOutline
+                onClick={() => goback("/app")}
+                className="text-[1.9rem] mt-0.5 mb-5 hover:scale-x-[1.15] hover:-translate-x-1 duration-200 ease-linear cursor-pointer"
+            />
             <div className="top flex justify-between max-[1035px]:flex-col max-[1035px]:gap-10 duration-300 ease-linear">
                 <div className="top-left flex gap-4 max-[343px]:gap-3 max-w-[48%] max-[1100px]:max-w-[53%] max-[1035px]:max-w-[70%] max-[850px]:max-w-[78%] max-[707px]:max-w-[80%] max-[640px]:max-w-[84%] max-[560px]:max-w-[86%] max-[522px]:max-w-[90%] max-[464px]:max-w-[100%]">
                     <div className="book-open-img duration-300 ease-linear max-w-[33%] max-[1220px]:max-w-[38%] max-[1000px]:max-w-[35%] max-[872px]:max-w-[40%] max-[690px]:max-w-[38.5%] max-[640px]:max-w-[43%] max-[570px]:max-w-[41%] max-[522px]:max-w-[43%] max-[482px]:max-w-[42%] max-[343px]:max-w-[41%]">
@@ -46,14 +49,14 @@ export const BookPage = () => {
 
                         {
                             book.bookRating === 0 ?
-                                <Ratings 
-                                    bookId={book.id} 
+                                <Ratings
+                                    bookId={book.id}
                                     addStarStyles={"text-[hsl(51,100%,49%)] dark:text-[hsl(51,100%,60%)] text-[1.41rem] max-[850px]:text-[1.35rem] max-[785px]:text-[1.62rem] max-[640px]:text-[1.41rem] max-[522px]:text-[1.35rem] max-[384px]:text-[1.15rem] max-[343px]:text-[1.05rem] duration-200 ease-linear"}
                                 /> :
-                                <BookRating 
-                                    bookRatings={book.bookRating} 
+                                <BookRating
+                                    bookRatings={book.bookRating}
                                     addStarStyles={"text-[1.41rem] max-[850px]:text-[1.35rem] max-[785px]:text-[1.62rem] max-[640px]:text-[1.41rem] max-[522px]:text-[1.35rem] max-[384px]:text-[1.15rem] max-[343px]:text-[1.05rem]"}
-                                />      
+                                />
                         }
                     </div>
                 </div>

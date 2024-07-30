@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import useThemeStore from "../../stores/theme/ThemeStore";
+import useThemeStore from "../stores/theme/ThemeStore";
 
 import { FiSun } from "react-icons/fi";
 import { BsMoonStars } from "react-icons/bs";
@@ -32,7 +32,7 @@ export const ThemeBtn = ({ addStyles, hideSeek, btnText }) => {
             className={`text-slate-800 dark:text-slate-100 p-[0.7rem] ${addStyles} ${hideSeek}`}
             onClick={handleTheme}
         >
-            {theme === "light" ? <BsMoonStars /> : <FiSun />} {btnText}
+            {theme === "light" ? <FiSun /> : <BsMoonStars />} {btnText}
         </button>
     );
 };
