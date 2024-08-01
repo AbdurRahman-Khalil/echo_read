@@ -2,13 +2,13 @@ import { create } from "zustand";
 
 import { devtools, persist } from "zustand/middleware";
 
-// import { booksData } from "./data"; 
+import { booksData } from "./data"; 
 // import { myBooksData } from "./MyData"; 
 
 
 const bookStore = (set) => ({
 
-    books: [],
+    books: booksData,
     myBooks: [],
 
     addBook: (book) => {

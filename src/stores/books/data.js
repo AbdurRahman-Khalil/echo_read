@@ -1,9 +1,9 @@
-import b1 from "../../assets/books/book1.jpeg";
-import b2 from "../../assets/books/book2.jpg";
-import b3 from "../../assets/books/book3.jpg";
-import b4 from "../../assets/books/book4.jpeg";
-import b5 from "../../assets/books/book5.jpeg";
-import b6 from "../../assets/books/book6.jpeg";
+import b1 from "../../assets/books/funny_story.jpg";
+import b2 from "../../assets/books/the_woman_in_the_window.jfif";
+import b3 from "../../assets/books/bride.jpg";
+import b4 from "../../assets/books/just_for_the_summer.jpg";
+import b5 from "../../assets/books/the_fury.jpg";
+import b6 from "../../assets/books/blue_sisters.jpg";
 
 import u1 from "../../assets/megan_hanson.jpg";
 import u2 from "../../assets/willard_arnold.jpg";
@@ -18,10 +18,10 @@ export const booksData = [
     {
         id: 1,
         bookImg: b1,
-        bookName: "Lethal White",
-        author: "Robert Galbraith",
-        description: `${"The Tales of Beedle the Bard"} is a collection of five wizarding fairy tales written by J.K. Rowling. Each story imparts moral lessons with a magical twist, beloved in the wizarding world of Harry Potter. The book includes "The Tale of the Three Brothers," which plays a significant role in the series' final installment. With illustrations and annotations by Albus Dumbledore, the book offers insights into the magical lore and traditions of the wizarding world. Rowling's enchanting storytelling brings these tales to life, making them timeless and captivating. The moral lessons embedded within the stories are both profound and thought-provoking. This collection is a charming and whimsical addition to the Harry Potter universe, appealing to fans of all ages. It is a must-have for anyone who loves the magic and wonder of Rowling's world.`,
-        bookRating: 4.6,
+        bookName: "Funny Story",
+        author: "Emily Henry",
+        description: `AN INSTANT #1 NEW YORK TIMES BESTSELLER!Named a Most Anticipated book of 2024 by TIME ∙ The New York Times ∙ Goodreads ∙ Entertainment Weekly ∙ Today ∙ Paste ∙ SheReads ∙ BookPage ∙ Woman's World ∙ The Nerd Daily and more!A shimmering, joyful new novel about a pair of opposites with the wrong thing in common, from #1 `,
+        bookRating: 4.55,
         usersRatings: [],
         userImg: u1,
         userName: "Megan Hanson",
@@ -31,10 +31,10 @@ export const booksData = [
     {
         id: 2,
         bookImg: b2,
-        bookName: "The Cuckoo Calling",
-        author: "Robert Galbraith",
-        description: `${"The Tales of Beedle the Bard"} is a collection of five wizarding fairy tales written by J.K. Rowling. Each story imparts moral lessons with a magical twist, beloved in the wizarding world of Harry Potter. The book includes "The Tale of the Three Brothers," which plays a significant role in the series' final installment. With illustrations and annotations by Albus Dumbledore, the book offers insights into the magical lore and traditions of the wizarding world. Rowling's enchanting storytelling brings these tales to life, making them timeless and captivating. The moral lessons embedded within the stories are both profound and thought-provoking. This collection is a charming and whimsical addition to the Harry Potter universe, appealing to fans of all ages. It is a must-have for anyone who loves the magic and wonder of Rowling's world.`,
-        bookRating: 3.6,
+        bookName: "The Woman in the Window",
+        author: "A. J. Finn",
+        description: `The Woman in the Window is a thriller novel by American author A.J. Finn, published by William Morrow on January 2, 2018. It hit #1 on the New York Times bestseller list.`,
+        bookRating: 4.75,
         usersRatings: [],
         userImg: u2,
         userName: "Willard Arnold",
@@ -42,14 +42,27 @@ export const booksData = [
         reviews: [],
     },
     {
+        id: 3,
+        bookImg: b3,
+        bookName: "Bride",
+        author: "Ali Hazelwood",
+        description: `Ali Hazelwood is the #1 New York Times bestselling author of Love, Theoretically and The Love Hypothesis, as well as a writer of peer-reviewed articles about brain science, in which no one makes out and the ever after is not always happy. Originally from Italy, she lived in Germany and Japan before moving to the US to pursue a PhD in neuroscience. When Ali is not at work, she can be found running, eating cake pops, or watching sci-fi movies with her three feline overlords (and her slightly-less-feline husband).`,
+        bookRating: 3.6,
+        usersRatings: [],
+        userImg: u3,
+        userName: "Leta Carpenter",
+        listedOn: "",
+        reviews: [],
+    },
+    {
         id: 4,
         bookImg: b4,
-        bookName: "Wuthering Heights",
-        author: "Thrushcross Grange",
-        description: `${"The Tales of Beedle the Bard"} is a collection of five wizarding fairy tales written by J.K. Rowling. Each story imparts moral lessons with a magical twist, beloved in the wizarding world of Harry Potter. The book includes "The Tale of the Three Brothers," which plays a significant role in the series' final installment. With illustrations and annotations by Albus Dumbledore, the book offers insights into the magical lore and traditions of the wizarding world. Rowling's enchanting storytelling brings these tales to life, making them timeless and captivating. The moral lessons embedded within the stories are both profound and thought-provoking. This collection is a charming and whimsical addition to the Harry Potter universe, appealing to fans of all ages. It is a must-have for anyone who loves the magic and wonder of Rowling's world.`,
-        bookRating: 5,
+        bookName: "Just for the Summer",
+        author: "Abby Jimenez",
+        description: `Justin has a curse, and thanks to a Reddit thread, it's now all over the internet. Every woman he dates goes on to find their soul mate the second they break up. When a woman slides into his DMs with the same problem, they come up with a plan: They'll date each other and break up. Their curses will cancel each other’s out, and they’ll both go on to find the love of their lives. It’s a bonkers idea… and it just might work.`,
+        bookRating: 3.25,
         usersRatings: [],
-        userImg: u4,
+        userImg: u3,
         userName: "Owen Frazier",
         listedOn: "",
         reviews: [],
@@ -57,29 +70,31 @@ export const booksData = [
     {
         id: 5,
         bookImg: b5,
-        bookName: "Soldier Island",
-        author: "Thrushcross Grange",
-        description: `${"The Tales of Beedle the Bard"} is a collection of five wizarding fairy tales written by J.K. Rowling. Each story imparts moral lessons with a magical twist, beloved in the wizarding world of Harry Potter. The book includes "The Tale of the Three Brothers," which plays a significant role in the series' final installment. With illustrations and annotations by Albus Dumbledore, the book offers insights into the magical lore and traditions of the wizarding world. Rowling's enchanting storytelling brings these tales to life, making them timeless and captivating. The moral lessons embedded within the stories are both profound and thought-provoking. This collection is a charming and whimsical addition to the Harry Potter universe, appealing to fans of all ages. It is a must-have for anyone who loves the magic and wonder of Rowling's world.`,
-        bookRating: 2.5,
+        bookName: "The Fury",
+        author: "Alex Michaelides",
+        description: `A masterfully paced thriller about a reclusive ex–movie star and her famous friends whose spontaneous trip to a private Greek island is upended by a murder ― from the #1 New York Times bestselling author of The Silent Patient.`,
+        bookRating: 3.85,
         usersRatings: [],
         userImg: u5,
-        userName: "Vickie Mckinney",
+        userName: "Julio Shaw",
         listedOn: "",
         reviews: [],
     },
     {
         id: 6,
         bookImg: b6,
-        bookName: "The Tales of Beedle The Bard",
-        author: "J.K. Rowling",
-        description: `${"The Tales of Beedle the Bard"} is a collection of five wizarding fairy tales written by J.K. Rowling. Each story imparts moral lessons with a magical twist, beloved in the wizarding world of Harry Potter. The book includes "The Tale of the Three Brothers," which plays a significant role in the series' final installment. With illustrations and annotations by Albus Dumbledore, the book offers insights into the magical lore and traditions of the wizarding world. Rowling's enchanting storytelling brings these tales to life, making them timeless and captivating. The moral lessons embedded within the stories are both profound and thought-provoking. This collection is a charming and whimsical addition to the Harry Potter universe, appealing to fans of all ages. It is a must-have for anyone who loves the magic and wonder of Rowling's world.`,
-        bookRating: 4.5,
+        bookName: "Blue Sisters",
+        author: "Coco Mellors",
+        description: `The three Blue sisters are exceptional—and exceptionally different. Avery, the eldest and a recovering heroin addict turned strait-laced lawyer, lives with her wife in London; Bonnie, a former boxer, works as a bouncer in Los Angeles following a devastating defeat; and Lucky, the youngest, models in Paris while trying to outrun her hard-partying ways. They also had a fourth sister, Nicky, whose unexpected death left the family reeling. A year later, as they each navigate grief, addiction, and ambition, they find they must return to New York to stop the sale of the apartment they were raised in.`,
+        bookRating: 4.15,
         usersRatings: [],
         userImg: u6,
-        userName: "Julio Shaw",
+        userName: "Vickie Mckinney",
         listedOn: "",
         reviews: [],
     },
+    
+    
 ];
 
 
