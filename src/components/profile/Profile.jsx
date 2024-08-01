@@ -9,8 +9,7 @@ import { Info } from './Info';
 import { ContactInfo } from './ContactInfo';
 import { MyBook } from "./MyBook";
 import { Gmail } from "../custom_components/logos/Gmail";
-import { Instagram } from "../custom_components/logos/Instagram";
-import { TwitterX } from "../custom_components/logos/TwitterX";
+import { Facebook } from "../custom_components/logos/Facebook";
 // import { books } from "./home/books/Books/books";
 
 import vickie_mckinney from "../../assets/vickie_mckinney.jpg";
@@ -88,8 +87,8 @@ export const Profile = () => {
                                 <p className="relative before:absolute before:top-[0.2rem] before:-left-[0.41rem] dark:before:-left-[0.47rem] before:w-1 before:h-5 before:bg-slate-800 dark:before:bg-slate-100 before:rounded-full"
                                 >Contact Info</p>
                                 <div className="text-[0.93rem] space-y-1.5">
-                                    <p className="flex items-center gap-1.5">
-                                        <BsTelephone className="text-[1.15rem]" /> 03371439697
+                                    <p className="flex items-center gap-[0.55rem]">
+                                        <BsTelephone className="text-[1.15rem] ml-[0.08rem]" /> 03371439697
                                     </p>
                                     <ContactInfo
                                         contactInfoIcon={<Gmail />}
@@ -97,14 +96,9 @@ export const Profile = () => {
                                         contactInfoText={"Vickie_Mckinney341@gmail.com"}
                                     />
                                     <ContactInfo
-                                        contactInfoIcon={<Instagram />}
-                                        href={"https://instagram.com"}
-                                        contactInfoText={"vickie_mckinney"}
-                                    />
-                                    <ContactInfo
-                                        contactInfoIcon={<TwitterX />}
-                                        href={"https://:x.com"}
-                                        contactInfoText={"vickie_mck"}
+                                        contactInfoIcon={<Facebook />}
+                                        href={"https://facebook.com"}
+                                        contactInfoText={"Vickie_Mckinney@yahoo.com"}
                                     />
                                 </div>
                             </div>
