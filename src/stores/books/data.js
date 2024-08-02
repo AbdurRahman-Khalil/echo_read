@@ -62,7 +62,7 @@ export const booksData = [
         description: `Justin has a curse, and thanks to a Reddit thread, it's now all over the internet. Every woman he dates goes on to find their soul mate the second they break up. When a woman slides into his DMs with the same problem, they come up with a plan: They'll date each other and break up. Their curses will cancel each other’s out, and they’ll both go on to find the love of their lives. It’s a bonkers idea… and it just might work.`,
         bookRating: 3.25,
         usersRatings: [],
-        userImg: u3,
+        userImg: u4,
         userName: "Owen Frazier",
         listedOn: "",
         reviews: [],
