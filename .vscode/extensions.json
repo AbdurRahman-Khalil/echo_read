@@ -1,5 +1,11 @@
 {
     "recommendations": [
-        "mongodb.mongodb-vscode"
+        "mongodb.mongodb-vscode",
+        "thomaz.preparing",
+        "beardedbear.beardedtheme",
+        "fisheva.eva-theme",
+        "wesbos.theme-cobalt2",
+        "azemoh.one-monokai",
+        "maxmckinney.theme-smooth-yellow"
     ]
 }
