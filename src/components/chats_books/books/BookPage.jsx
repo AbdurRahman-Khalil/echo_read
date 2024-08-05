@@ -30,10 +30,10 @@ export const BookPage = () => {
 
 
     return (
-        <div className="-mx-3.5 pb-5 pt-[0.02rem] max-[780px]:pt-6 px-[1.15rem] text-slate-800 dark:text-slate-100 ">
+        <div className="-mx-3.5 pb-5 pt-[0.02rem] px-[1.15rem] text-slate-800 dark:text-slate-100 ">
             <IoArrowBackOutline
                 onClick={() => goback("/app")}
-                className="text-[1.9rem] mt-0.5 mb-5 hover:scale-x-[1.15] hover:-translate-x-1 duration-200 ease-linear cursor-pointer"
+                className="text-[1.9rem] mt-0.5 mb-6 hover:scale-x-[1.15] hover:-translate-x-1 duration-200 ease-linear cursor-pointer"
             />
             <div className="top flex justify-between max-[1035px]:flex-col max-[1035px]:gap-10 duration-300 ease-linear">
                 <div className="top-left flex gap-4 max-[343px]:gap-3 max-w-[48%] max-[1100px]:max-w-[53%] max-[1035px]:max-w-[70%] max-[850px]:max-w-[78%] max-[707px]:max-w-[80%] max-[640px]:max-w-[84%] max-[560px]:max-w-[86%] max-[522px]:max-w-[90%] max-[464px]:max-w-[100%]">
@@ -43,8 +43,8 @@ export const BookPage = () => {
                     <div className="book-text flex-1 flex flex-col justify-between">
                         <div>
                             {/* max-[590px]:line-clamp-3 max-[522px]:line-clamp-4 max-[500px]:line-clamp-3 max-[464px]:line-clamp-4 */}
-                            <h1 className="text-[2.3rem] min-[1035px]:max-[1100px]:text-[2.1rem] max-[850px]:text-[2.1rem] max-[785px]:text-[2.7rem] max-[640px]:text-[2.4rem] max-[522px]:text-[2.1rem] max-[384px]:text-[1.8rem] max-[343px]:text-[1.6rem] leading-[2.8rem] min-[1000px]:max-[1100px]:leading-[2.7rem] max-[850px]:leading-[2.6rem] max-[785px]:leading-[3.3rem] max-[640px]:leading-[2.9rem] max-[522px]:leading-[2.6rem] max-[384px]:leading-[2.25rem] max-[343px]:leading-[2rem] line-clamp-3 max-[522px]:line-clamp-4 max-[482px]:line-clamp-3 duration-300 ease-linear font-bold dark:font-semibold">{book.bookName}</h1>
-                            <p className="text-[1.3rem] min-[1035px]:max-[1100px]:text-[1.2rem] max-[850px]:text-[1.2rem] max-[785px]:text-[1.4rem] max-[640px]:text-[1.25rem] max-[522px]:text-[1.1rem] max-[384px]:text-[1rem] max-[343px]:text-[0.962rem] duration-300 ease-linear font-semibold dark:font-medium mt-0.5 max-[850px]:mt-1 max-[785px]:mt-1.5 max-[343px]:mt-1">{book.author}</p>
+                            <h1 className="text-[2.3rem] min-[1035px]:max-[1100px]:text-[2.1rem] max-[850px]:text-[2.17rem] max-[785px]:text-[2.6rem] max-[640px]:text-[2.4rem] max-[522px]:text-[2.1rem] max-[384px]:text-[1.8rem] max-[343px]:text-[1.6rem] leading-[2.8rem] min-[1000px]:max-[1100px]:leading-[2.7rem] max-[850px]:leading-[2.6rem] max-[785px]:leading-[3.33rem] max-[640px]:leading-[2.9rem] max-[522px]:leading-[2.6rem] max-[384px]:leading-[2.25rem] max-[343px]:leading-[2rem] line-clamp-3 max-[522px]:line-clamp-4 max-[482px]:line-clamp-3 duration-300 ease-linear font-bold dark:font-semibold">{book.bookName}</h1>
+                            <p className="text-[1.3rem] min-[1035px]:max-[1100px]:text-[1.2rem] max-[850px]:text-[1.2rem] max-[785px]:text-[1.3rem] max-[640px]:text-[1.25rem] max-[522px]:text-[1.1rem] max-[384px]:text-[1rem] max-[343px]:text-[0.962rem] duration-300 ease-linear font-semibold dark:font-medium mt-0.5 max-[850px]:mt-1 max-[785px]:mt-1.5 max-[343px]:mt-1">{book.author}</p>
                         </div>
 
                         {
@@ -67,13 +67,13 @@ export const BookPage = () => {
                             styles={"user flex items-center gap-2"}
                             userImg={book.userImg}
                             userName={book.userName}
-                            addImgStyles={"max-w-11 min-[1000px]:max-[1100px]:max-w-[2.63rem]"}
-                            addUsernameStyles={"text-[1.1rem] min-[1000px]:max-[1100px]:text-[1.04rem] max-[522px]:text-[1rem] max-[384px]:text-[0.93rem]"}
+                            addImgStyles={"max-w-11 min-[1000px]:max-[1100px]:max-w-[2.63rem] max-[464px]:max-w-[2.53rem] max-[415px]:max-w-[2.4rem] max-[384px]:max-w-[2.3rem] max-[343px]:max-w-[2.1rem]"}
+                            addUsernameStyles={"text-[1.1rem] min-[1000px]:max-[1100px]:text-[1.04rem] max-[522px]:text-[1rem] max-[464px]:text-[0.97rem] max-[415px]:text-[0.95rem] max-[384px]:text-[0.91rem] max-[343px]:text-[0.86rem]"}
                         />
 
                         <div className="flex items-center gap-1.5 ml-1">
-                            <GiBlackBook className="text-2xl min-[1000px]:max-[1100px]:text-[1.4rem] max-[522px]:text-[1.25rem] max-[384px]:text-[1.1rem]" />
-                            <p className="font-medium dark:font-normal min-[1000px]:max-[1100px]:text-[0.95rem] max-[522px]:text-[0.92rem] max-[384px]:text-[0.88rem]">On: {book.listedOn}</p>
+                            <GiBlackBook className="text-2xl min-[1000px]:max-[1100px]:text-[1.4rem] max-[522px]:text-[1.25rem] max-[464px]:text-[1.2rem] max-[415px]:text-[1.15rem] max-[384px]:text-[1.1rem] max-[343px]:text-[0.99rem]" />
+                            <p className="font-medium dark:font-normal min-[1000px]:max-[1100px]:text-[0.95rem] max-[522px]:text-[0.92rem] max-[464px]:text-[0.9rem] max-[415px]:text-[0.875rem] max-[384px]:text-[0.855rem] max-[343px]:text-[0.81rem]">On: {book.listedOn}</p>
                         </div>
                     </div>
                     <Button btnText={"Exchange"} addStyles={"py-2.5 w-72 max-[464px]:w-full text-[1.05rem] max-[522px]:text-[1rem] max-[384px]:text-[0.96rem] max-[343px]:text-[0.925rem]"} />
@@ -82,7 +82,10 @@ export const BookPage = () => {
 
             <div className="bottom mt-12">
                 <div id="description" className="mb-8">
-                    <h2 className="text-[1.875rem] max-[522px]:text-[1.64rem] max-[384px]:text-[1.47rem] max-[343px]:text-[1.375rem] font-semibold dark:font-medium mb-1">Description</h2>
+                    <h2 className="text-[1.875rem] max-[1100px]:text-[1.73rem] max-[850px]:text-[1.62rem] max-[785px]:text-[1.975rem] max-[640px]:text-[1.855rem] max-[522px]:text-[1.62rem] max-[384px]:text-[1.43rem] max-[343px]:text-[1.345rem] max-[320px]:text-[1.315rem] font-semibold dark:font-medium mb-1"
+                    >
+                        Description:
+                    </h2>
                     <p className="font-medium dark:font-normal max-[522px]:text-[0.96rem] max-[384px]:text-[0.93rem]">{book.description}</p>
                 </div>
 
@@ -96,6 +99,8 @@ export const BookPage = () => {
 
 
 // parent div : rounded-lg border border-slate-900/20 dark:border-slate-50/20
+
+// h2-desc: before:absolute before:top-[0.63rem] before:-left-1.5 before:w-[0.3rem] before:h-[55%] before:rounded-full before:bg-slate-700 dark:before:bg-slate-200
 
 
 

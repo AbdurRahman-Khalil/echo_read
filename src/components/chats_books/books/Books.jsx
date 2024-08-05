@@ -33,11 +33,10 @@ export const Books = () => {
     return (
         <div id="books" className="mt-3 max-[780px]:mt-3.5 mr-3.5 ml-[14.25rem] max-[785px]:ml-3.5">
             {/* <Categories /> */}
-            <SearchBar hideSeek={"hidden max-[780px]:block w-full"} />
 
             {showBooksContainer && (
-
-
+                <>
+                <SearchBar hideSeek={"hidden max-[780px]:block w-full"} />
                 <motion.div
                     id="books-container"
                     className="grid grid-cols-3 max-[1024px]:grid-cols-2 max-[561px]:grid-cols-1 min-[1425px]:grid-cols-4 gap-3 mt-4 max-[780px]:mt-5 mb-4"
@@ -70,6 +69,7 @@ export const Books = () => {
                         }
                     </AnimatePresence>
                 </motion.div>
+                </>
             )}
             <Outlet />
         </div>

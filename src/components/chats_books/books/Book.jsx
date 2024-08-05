@@ -42,8 +42,8 @@ export const Book = ({ bookId, bookImg, bookName, bookRating, author, userImg, u
                     styles={"user flex items-center gap-1.5 max-[561px]:gap-2 max-[365px]:gap-1.5 min-[1425px]:mt-1 min-[1525px]:mt-0"}
                     userImg={userImg}
                     userName={userName}
-                    addImgStyles={"max-w-8 max-[561px]:max-w-12 max-[423px]:max-w-11 max-[365px]:max-w-10 max-[355px]:max-w-9 min-[1425px]:max-w-7 min-[1525px]:max-w-8"}
-                    addUsernameStyles={"text-[0.8rem] max-[1080px]:text-[0.77rem] max-[1024px]:text-[0.9rem] max-[841px]:text-[0.865rem] max-[815px]:text-[0.825rem] max-[785px]:text-[0.89rem] max-[645px]:text-[0.85rem] max-[605px]:text-[0.815rem] max-[561px]:text-[1.04rem] max-[423px]:text-[0.945rem] max-[365px]:text-[0.88rem] line-clamp-1 min-[1425px]:text-[0.75rem] min-[1525px]:text-[0.8rem]"}
+                    addImgStyles={"max-w-8 max-[561px]:max-w-12 max-[473px]:max-w-11 max-[456px]:max-w-10 max-[400px]:max-w-9 max-[369px]:max-w-[2.145rem] max-[351px]:max-w-[1.97rem] max-[336px]:max-w-[1.9rem] min-[1425px]:max-w-7 min-[1525px]:max-w-8"}
+                    addUsernameStyles={"text-[0.8rem] max-[1080px]:text-[0.77rem] max-[1024px]:text-[0.9rem] max-[841px]:text-[0.865rem] max-[815px]:text-[0.825rem] max-[785px]:text-[0.89rem] max-[645px]:text-[0.85rem] max-[605px]:text-[0.815rem] max-[561px]:text-[1.04rem] max-[473px]:text-[0.98rem] max-[456px]:text-[0.955rem] max-[423px]:text-[0.945rem] max-[400px]:text-[0.9rem] max-[369px]:text-[0.85rem] max-[351px]:text-[0.835rem] max-[336px]:text-[0.8rem] max-[323px]:text-[0.77rem] line-clamp-1 min-[1425px]:text-[0.75rem] min-[1525px]:text-[0.8rem]"}
                 />
 
                 <Button addStyles={"py-2 mt-2"} btnText={"Exchange"} />

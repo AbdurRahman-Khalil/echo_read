@@ -81,7 +81,7 @@ export const BookReviews = ({ book }) => {
 
     return (
         <div id="reviews">
-            <h2 className="text-[1.875rem] max-[522px]:text-[1.64rem] max-[384px]:text-[1.47rem] max-[343px]:text-[1.375rem] font-semibold dark:font-medium -mb-1">Reviews</h2>
+            <h2 className="text-[1.875rem] max-[1100px]:text-[1.73rem] max-[850px]:text-[1.62rem] max-[785px]:text-[1.975rem] max-[640px]:text-[1.855rem] max-[522px]:text-[1.62rem] max-[384px]:text-[1.43rem] max-[343px]:text-[1.345rem] max-[320px]:text-[1.315rem] font-semibold dark:font-medium -mb-1">Reviews</h2>
 
             <Formik
                 initialValues={initialValues}
