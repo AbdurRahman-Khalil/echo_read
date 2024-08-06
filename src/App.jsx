@@ -50,7 +50,7 @@ const App = () => {
             <Route path="/app/books/:bid" element={<BookPage />} />
           </Route>
           <Route path="/app/profile" element={<Profile />} />
-          <Route path="/app/profile/my_books" element={<Profile />} />
+          {/* <Route path="/app/profile/my_books" element={<Profile />} /> */}
           <Route path="/app/list_book" element={<ListBook />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

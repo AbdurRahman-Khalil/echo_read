@@ -7,11 +7,11 @@ import { motion } from 'framer-motion';
 
 import { ThemeBtn } from './ThemeBtn';
 
-import userImg from "../assets/megan_hanson.jpg";
+import userImg from "../assets/vickie_mckinney.jpg";
 
 import { HiOutlineHome } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
-import { PiBooks } from "react-icons/pi";
+// import { PiBooks } from "react-icons/pi";
 import { HiOutlineViewGridAdd } from "react-icons/hi";
 import { TbLogout2 } from "react-icons/tb";
 import { LuMessagesSquare } from "react-icons/lu";
@@ -96,7 +96,7 @@ export const FlyoutMenu = ({ onListBookClick }) => {
                             <CgProfile className='text-[1.4rem]' />
                             Profile
                         </Link>
-                        <Link
+                        {/* <Link
                             // href="#my-books"
                             to={"/app/profile/my_books"}
                             className="py-3.5 flyout-menu-item"
@@ -105,7 +105,7 @@ export const FlyoutMenu = ({ onListBookClick }) => {
                         >
                             <PiBooks className='text-[1.4rem]' />
                             My Books
-                        </Link>
+                        </Link> */}
                         <Link
                             to={"/app/list_book"}
                             className="py-3.5 cursor-pointer flyout-menu-item"

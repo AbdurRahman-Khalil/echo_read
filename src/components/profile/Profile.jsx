@@ -14,7 +14,7 @@ import { Facebook } from "../custom_components/logos/Facebook";
 
 import vickie_mckinney from "../../assets/vickie_mckinney.jpg";
 
-import { FiEdit } from "react-icons/fi";
+// import { FiEdit } from "react-icons/fi";
 import { BsGenderFemale } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
 import { PiCake } from "react-icons/pi";
@@ -51,7 +51,7 @@ export const Profile = () => {
                         exit={{ opacity: 0 }}
                         className="profile-content max-w-[22rem] max-[555px]:max-w-full border border-slate-900/20 dark:border-slate-50/20 rounded-xl px-4 py-5 mt-1.5 mb-4 relative"
                     >
-                        <FiEdit className="absolute top-3 right-3 text-xl text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 duration-200 ease-linear cursor-pointer" />
+                        {/* <FiEdit className="absolute top-3 right-3 text-xl text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 duration-200 ease-linear cursor-pointer" /> */}
                         <User
                             styles={"flex flex-col items-center gap-3"}
                             userImg={vickie_mckinney}
