@@ -6,6 +6,8 @@
         "fisheva.eva-theme",
         "wesbos.theme-cobalt2",
         "azemoh.one-monokai",
-        "maxmckinney.theme-smooth-yellow"
+        "maxmckinney.theme-smooth-yellow",
+        "be5invis.vscode-icontheme-nomo-dark",
+        "heron.firefox-devtools-theme"
     ]
 }
